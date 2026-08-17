@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Rescayl",
+  "version": "0.1.0",
+  "identifier": "org.rescayl.Rescayl",
+  "build": {
+    "beforeDevCommand": "npm run dev:web",
+    "devUrl": "http://localhost:3000",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../renderer/out"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Rescayl",
+        "width": 1300,
+        "height": 940,
+        "minWidth": 600,
+        "minHeight": 500,
+        "resizable": true,
+        "fullscreen": false,
+        "backgroundColor": "#171717",
+        "hiddenTitle": true,
+        "titleBarStyle": "Overlay"
+      }
+    ],
+    "security": {
+      "csp": null,
+      "assetProtocol": {
+        "enable": true,
+        "scope": ["**"]
+      }
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "category": "Graphics",
+    "shortDescription": "AI Image Upscaler",
+    "longDescription": "Rescayl - Free and Open Source AI Image Upscaler",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "resources": {
+      "../resources/models/**/*": "resources/models/",
+      "../resources/scripts/**/*": "resources/scripts/",
+      "../resources/linux/bin/**/*": "resources/bin/",
+      "../resources/mac/bin/**/*": "resources/bin/",
+      "../resources/win/bin/**/*": "resources/bin/",
+      "../resources/marketplace.json": "resources/marketplace.json"
+    }
+  }
+}

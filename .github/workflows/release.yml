@@ -1,0 +1,118 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  linux:
+    name: Build Linux bundles
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install system dependencies (Tauri v2 / WebKitGTK)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwebkit2gtk-4.1-dev \
+            build-essential \
+            curl \
+            wget \
+            file \
+            libxdo-dev \
+            libssl-dev \
+            libayatana-appindicator3-dev \
+            librsvg2-dev \
+            jq \
+            unzip
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: src-tauri
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install frontend dependencies
+        run: npm ci
+
+      # upscayl-bin and model weights are intentionally not stored in git.
+      # Fetch the platform binaries so they end up bundled with the app.
+      - name: Fetch upscayl-ncnn binaries
+        run: bash update_upscayl_ncnn_binaries.sh
+
+      - name: Build bundles
+        run: npm run tauri build
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: rescayl-linux
+          path: |
+            src-tauri/target/release/bundle/**/*
+          if-no-files-found: error
+
+      - name: Attach to release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: src-tauri/target/release/bundle/**/*
+
+  windows:
+    name: Build Windows installer
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: src-tauri
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install frontend dependencies
+        run: npm ci
+
+      - name: Fetch upscayl-ncnn windows binary
+        shell: pwsh
+        run: |
+          $release = Invoke-RestMethod https://api.github.com/repos/upscayl/upscayl-ncnn/releases/latest
+          $asset = $release.assets | Where-Object { $_.name -match 'windows' } | Select-Object -First 1
+          if (-not $asset) { throw "No windows asset found in upscayl-ncnn latest release" }
+          Invoke-WebRequest -Uri $asset.browser_download_url -OutFile upscayl-bin-win.zip
+          Expand-Archive -Path upscayl-bin-win.zip -DestinationPath extracted -Force
+          New-Item -ItemType Directory -Force -Path resources/win/bin | Out-Null
+          Get-ChildItem extracted -Recurse -Filter "upscayl-bin.exe" | Select-Object -First 1 | ForEach-Object { Copy-Item $_.FullName resources/win/bin/upscayl-bin.exe }
+          Get-ChildItem extracted -Recurse -Filter "vcomp140*.dll" | ForEach-Object { Copy-Item $_.FullName resources/win/bin/ }
+          Remove-Item -Recurse -Force extracted, upscayl-bin-win.zip
+
+      - name: Build installer
+        run: npm run tauri build
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: rescayl-windows
+          path: |
+            src-tauri/target/release/bundle/**/*
+          if-no-files-found: error
+
+      - name: Attach to release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: src-tauri/target/release/bundle/**/*

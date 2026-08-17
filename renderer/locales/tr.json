@@ -1,0 +1,345 @@
+{
+  "TITLE": "Rescayl",
+  "INTRO": "Rescayl Cloud ile tanışın!",
+  "HEADER": {
+    "DESCRIPTION": "AI Görsel İyileştirici"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "Telif Hakkı ©"
+  },
+  "SETTINGS": {
+    "TITLE": "Ayarlar",
+    "CHANGE_LANGUAGE": {
+      "TITLE": "Dili Değiştirin"
+    },
+    "IMAGE_COMPRESSION": {
+      "TITLE": "Görsel Sıkıştırma",
+      "DESCRIPTION": "PNG sıkıştırması kayıpsızdır, bu nedenle dosya boyutunu önemli ölçüde küçültmeyebilir ve daha yüksek sıkıştırma değerleri performansı etkileyebilir. JPG ve WebP sıkıştırması ise kayıplıdır."
+    },
+    "CUSTOM_MODELS": {
+      "TITLE": "ÖZEL MODELLER EKLE",
+      "BUTTON_FOLDER": "Klasör Seçin",
+      "DESCRIPTION": "Kendi modellerini zahmetsizce ekleyebilirsin. Detaylar için:"
+    },
+    "CUSTOM_INPUT_RESOLUTION": {
+      "TITLE": "ÖZEL ÇIKIŞ GENİŞLİĞİ",
+      "RESTART": "YENİDEN BAŞLATMA GEREKLİ",
+      "DESCRIPTION": "Çıktı görseller için özel bir genişlik kullan. Yükseklik kendiliğinden ayarlanacak. Bunu etkinleştirmek ölçeklendirme ayarlarını geçersiz kılacak.."
+    },
+    "GPU_ID_INPUT": {
+      "TITLE": "GPU ID",
+      "DESCRIPTION": "Daha fazla bilgi için lütfen Rescayl Dökümantasyonunu okuyun.",
+      "ADDITIONAL_DESCRIPTION": "Windows'da daha iyi sonuçlar için performnas modunu etkinleştirin."
+    },
+    "IMAGE_FORMAT": {
+      "TITLE": "RESMİ ŞU OLARAK KAYDET:",
+      "PNG": "PNG",
+      "JPG": "JPG",
+      "WEBP": "WEBP"
+    },
+    "COPY_METADATA": {
+      "TITLE": "GÖRSEL META VERİLERİNİ KOPYALA",
+      "DESCRIPTION": "İyileştirilmiş görselde orijinal görsel meta verilerini (EXIF) koru.",
+      "SUGGEST_JPG_TITLE": "Önerilen Format Değişikliği",
+      "SUGGEST_JPG_DESCRIPTION": "Farklı sistemler arasında daha iyi meta veri uyumluluğu için JPG formatını kullanmanızı öneriyoruz. Değiştirmek ister misiniz?",
+      "CHANGE_TO_JPG": "JPG'ye Değiştir",
+      "KEEP_CURRENT_FORMAT": "{format} Olarak Kalsın"
+    },
+    "IMAGE_SCALE": {
+      "TITLE": "Görsel Ölçeği",
+      "DESCRIPTION": "4X'ten büyük herhangi bir ayar (16X Çifte Rescayl dışında) yalnızca görüntüyü yeniden boyutlandırır ve AI ile iyileştirme yapmaz.",
+      "WARNING": "5X üzerinde herhangi bir ayar bazı aygıtlarda performans sorunlarına neden olabilir!",
+      "ADDITIONAL_WARNING": "Bu bazı cihazlarda performans sorunlarına neden olabilir!"
+    },
+    "LOG_AREA": {
+      "ON_COPY": "KOPYALANDI ✅",
+      "BUTTON_TITLE": "KOPYA KAYITLARI 📋",
+      "NO_LOGS": "Gösterecek kayıt yok."
+    },
+    "OVERWRITE_TOGGLE": {
+      "TITLE": "ÖNCEKİ GELİŞTİRME AYARLARININ ÜZERİNE YAZ",
+      "DESCRIPTION": "Etkinleştirilirdiği takdirde, Rescayl görüntüyü doğrudan yüklemek yerine tekrardan işleyecektir."
+    },
+    "RESET_SETTINGS": {
+      "BUTTON_TITLE": "UPSCAYL'I SIFIRLA",
+      "ALERT": "Rescayl sıfırlandı. Lütfen uygulamayı yeniden başlatın."
+    },
+    "SAVE_OUTPUT_FOLDER": {
+      "TITLE": "ÇIKTI KLASÖRÜNÜ KAYDET",
+      "DESCRIPTION": "Etkinleştirildiği takdirde, Rescayl oturumlar arası çıktı klasörünü hatırlayacaktır."
+    },
+    "AUTO_UPDATE": {
+      "TITLE": "UPSCAYL'I OTOMATİK GÜNCELLE",
+      "DESCRIPTION": "Etkinleştirildiği takdirde, uygulama yeni güncellemeleri kendiliğinden kontrol edecek ve sizi de bilgilendirecektir."
+    },
+    "ENABLE_CONTRIBUTION": {
+      "TITLE": "UPSCAYL'I GELİŞTİRMEYE YARDIMCI OL",
+      "DESCRIPTION": "Etkinleştirildiği takdirde; Rescayl, uygulama arayüzünü ve özelliklerini geliştirmek için anonim kullanım verileri toplayacaktır."
+    },
+    "THEME": {
+      "TITLE": "UPSCAYL'IN TEMASI"
+    },
+    "LANGUAGE": {
+      "TITLE": "UPSCAYL'IN DİLİ"
+    },
+    "CUSTOM_TILE_SIZE": {
+      "TITLE": "ÖZEL KARO BOYUTU",
+      "DESCRIPTION": "Resmi parçalara ayırmak için özel bir karo boyutu kullanın. Bu, oluşturulan karo sayısını azaltarak görselleri daha hızlı işlemeye yardımcı olabilir."
+    },
+    "TURN_OFF_NOTIFICATIONS": {
+      "TITLE": "BİLDİRİMLERİ KAPAT",
+      "DESCRIPTION": "Etkinleştirildiği takdirde, Rescayl başarı veya başarısızlık durumunda herhangi bir sistem bildirimi göndermeyecektir."
+    },
+    "TTA_MODE": {
+      "TITLE": "TTA Modu",
+      "DESCRIPTION": "Test Zamanı Artırmasını (TTA) etkinleştirerek, örnek vermek gerekirse çizikler gibi bozulmaları kaldırarak daha iyi sonuçlar elde edebilirsiniz, LAKİN bu işlem süresini 8 kat uzatacaktır!"
+    },
+    "SYSTEM_INFO": {
+      "TITLE": "Sistem Bilgisi"
+    },
+    "PRESERVE_FILENAME": {
+      "TITLE": "PRESERVE ORIGINAL FILENAME",
+      "DESCRIPTION": "If enabled, the upscaled image keeps the original filename instead of appending the scale and model."
+    }
+  },
+  "APP": {
+    "TITLE": "Rescayl",
+    "BATCH_MODE": {
+      "TITLE": "Topyekün Rescayl",
+      "DESCRIPTION": "Bununla birlikte tek seferde bir bütün klasörü Rescayl edebilirsiniz."
+    },
+    "FILE_SELECTION": {
+      "TITLE": "1. Adım",
+      "BATCH_MODE_TYPE": "Klasör seç",
+      "SINGLE_MODE_TYPE": "Görsel seç"
+    },
+    "MODEL_SELECTION": {
+      "TITLE": "2. Adım",
+      "DESCRIPTION": "AI Model Seçimi",
+      "IMPORTED_CUSTOM_MODELS": "İçe aktarılmış özel modeller",
+      "BEFORE": "Öncesi",
+      "AFTER": "Sonrası",
+      "ZOOM": "Yakınlaştır",
+      "MODELS": {
+        "upscayl-standard-4x": {
+          "NAME": "Rescayl Standard",
+          "DESCRIPTION": "Çoğu görsel için ideal."
+        },
+        "upscayl-lite-4x": {
+          "NAME": "Rescayl Lite",
+          "DESCRIPTION": "Çoğu görsel için ideal. Minimal kalite kaybıyla, yüksek hızda ölçeklendirme."
+        },
+        "remacri-4x": {
+          "NAME": "Remacri (Ticari Değildir)",
+          "DESCRIPTION": "Doğal görüntüler için idealdir. Keskinlik ve detay ekler. Ticari kullanım için değildir."
+        },
+        "ultramix-balanced-4x": {
+          "NAME": "Ultramix (Ticari Değildir)",
+          "DESCRIPTION": "Keskinlik ve detay dengesiyle doğal görseller için idealdir."
+        },
+        "ultrasharp-4x": {
+          "NAME": "Ultrasharp (Ticari Değildir)",
+          "DESCRIPTION": "Keskinlik odaklı doğal görseller için idealdir."
+        },
+        "digital-art-4x": {
+          "NAME": "Dijital Sanat",
+          "DESCRIPTION": "Dijital sanat ve illüstrasyonlar için idealdir."
+        },
+        "high-fidelity-4x": {
+          "NAME": "Yüksek Doğruluk",
+          "DESCRIPTION": "Her türden görsel için idealdir, gerçekçi detaylara ve pürüzsüz dokulara odaklanır."
+        },
+        "realesr-animevideov3-x2": {
+          "NAME": "Anime Video (2x)",
+          "DESCRIPTION": "For anime and stylized content. Fast 2x upscaling with good quality."
+        },
+        "realesr-animevideov3-x3": {
+          "NAME": "Anime Video (3x)",
+          "DESCRIPTION": "For anime and stylized content. 3x upscaling with balanced quality."
+        },
+        "realesr-animevideov3-x4": {
+          "NAME": "Anime Video (4x)",
+          "DESCRIPTION": "For anime and stylized content. 4x upscaling for maximum detail."
+        }
+      }
+    },
+    "DOUBLE_UPSCAYL": {
+      "TITLE": "Çifte Rescayl",
+      "DESCRIPTION": "Bu seçeneği etkinleştirerek, bir görüntü üzerinde Rescayl'ı iki kez çalıştırabilirsiniz. Lakin, bu işlem süresinde önemli bir uzamaya ve 4X'ten büyük ölçeklerde performans sorunlarına yol açabilir."
+    },
+    "OUTPUT_PATH_SELECTION": {
+      "TITLE": "3. Adım",
+      "MAC_APP_STORE_ALERT": "MacOS App Store güvenlik kısıtlamaları nedeniyle, Rescayl her başlatıldığında bir çıktı klasörü seçmenizi isteyecektir.\n\nBunu engellemek için, Rescayl'ın 'Ayarlar' sekmesinde varsayılan bir çıktı klasörü kalıcı olarak kaydedebilirsiniz.",
+      "NOT_SELECTED": "Seçilmemiş",
+      "DEFAULT_IMG_PATH": "Çıktı resim, girdi resmin dizinine",
+      "DEFAULT_FOLDER_PATH": "Çıktı klasör, girdi klasörün dizine",
+      "BUTTON_TITLE": "Çıktı klasörünü seç"
+    },
+    "SCALE_SELECTION": {
+      "TITLE": "4. Adım",
+      "FROM_TITLE": "",
+      "TO_TITLE": "'dan ->",
+      "NO_OUTPUT_FOLDER_ALERT": "Lütfen önce bir çıktı klasörü seçin.",
+      "START_BUTTON_TITLE": "Rescayl'la 🚀",
+      "IN_PROGRESS_BUTTON_TITLE": "Rescayl'lanıyor ⏳"
+    },
+    "MORE_OPTIONS_DRAWER": {
+      "RESET_BUTTON_TITLE": "Resmi Sıfırla",
+      "LENS_VIEW_TITLE": "Lensli Büyüteç",
+      "SLIDER_VIEW_TITLE": "Kaydırmalı Büyüteç",
+      "ZOOM_AMOUNT_TITLE": "Yakınlaştırma Miktarı",
+      "TOTAL_UPSCAYLS": "Toplam Rescayllar",
+      "TOTAL_BATCH_UPSCAYLS": "Toplam Topyekün Rescayllar",
+      "TOTAL_IMAGE_UPSCAYLS": "Toplam Görsel Rescaylları",
+      "TOTAL_DOUBLE_UPSCAYLS": "Toplam Çifte Rescayllar",
+      "AVERAGE_UPSCAYL_TIME": "Ortalama Rescayl Süresi",
+      "LAST_UPSCAYL_DURATION": "Son Rescayl Süresi",
+      "LAST_USED_AT": "En son şu tarihte kullanıldı"
+    },
+    "PROGRESS_BAR": {
+      "BATCH_UPSCAYL_IN_PROGRESS_TITLE": "Topyekün Rescayl ediliyor...",
+      "IN_PROGRESS_TITLE": "Rescayl sihrini konuşturuyor...",
+      "STOP_BUTTON_TITLE": "DURDUR"
+    },
+    "RESET_BUTTON_TITLE": "Sıfırla",
+    "RIGHT_PANE_INFO": {
+      "SELECT_FOLDER": "Klasör Seçin",
+      "SELECT_IMAGE": "Görsel Seçin",
+      "SELECT_FOLDER_DESCRIPTION": "Lütfen klasörün PNG, JPG, JPEG ve WEBP uzantılı görseller haricinde birşey içermediğinden emin olun.",
+      "SELECT_IMAGES_DESCRIPTION": "Lütfen PNG, JPG, JPEG yahut WEBP uzantılı bir görsel seçin ya da sürükleyip buraya bırakın.",
+      "PASTE_IMAGE_DESCRIPTION": "Ctrl+V yahut ⌘+V tuşlarına basarak bir görsel yapıştırın."
+    },
+    "PROGRESS": {
+      "PROCESSING_TITLE": "Görsel işleniyor...",
+      "SCALING_CONVERTING_TITLE": "Görsel ölçeklendirilip dönüştürülüyor...",
+      "WAIT_TITLE": "Bekleyin...",
+      "SUCCESS_TITLE": "Rescayl Başarılı!",
+      "BATCH": {
+        "SELECTED_FOLDER_TITLE": "Seçili klasör:",
+        "DONE_TITLE": "Hepsi tamamlandı!",
+        "OPEN_UPSCAYLED_FOLDER_TITLE": "Rescayllenmiş klasörü açın"
+      }
+    },
+    "SLIDER": {
+      "ORIGINAL_TITLE": "Orjinali",
+      "UPSCAYLED_TITLE": "Rescayllanmışı"
+    },
+    "DIALOG_BOX": {
+      "CLOSE": "Kapat"
+    },
+    "BG_REMOVAL": {
+      "TITLE": "Background Removal",
+      "DESCRIPTION": "Automatically remove the background from your images before or after upscaling.",
+      "MODEL_TITLE": "Background Removal Model",
+      "MODEL_DESCRIPTION": "Select AI Model",
+      "REQUIRES_PYTHON": "Background removal requires Python with the 'rembg' package installed (pip install rembg onnxruntime). The model is downloaded on first use.",
+      "OPTIONS": {
+        "OFF": "Off",
+        "BEFORE": "Remove background before upscaling",
+        "AFTER": "Remove background after upscaling"
+      },
+      "MODELS": {
+        "u2netp": {
+          "NAME": "U2Net Portrait (Fast)",
+          "DESCRIPTION": "Lightweight and fast. Good balance of speed and quality for most subjects."
+        },
+        "u2net": {
+          "NAME": "U2Net",
+          "DESCRIPTION": "General purpose background removal with high quality results."
+        },
+        "isnet-general-use": {
+          "NAME": "ISNet General",
+          "DESCRIPTION": "High quality segmentation for general subjects, especially people."
+        },
+        "isnet-anime": {
+          "NAME": "ISNet Anime",
+          "DESCRIPTION": "Tuned for anime and illustration art."
+        },
+        "bria-rmbg-1.4": {
+          "NAME": "BRIA RMBG 1.4",
+          "DESCRIPTION": "Photorealistic background removal with excellent edge detail."
+        }
+      }
+    }
+  },
+  "ERRORS": {
+    "GPU_ERROR": {
+      "TITLE": "GPU Hatası",
+      "DESCRIPTION": "GPU'da bir hata meydana geldi. Sorun giderme için dökümantasyonu okuyun! ({data})"
+    },
+    "COPY_ERROR": {
+      "TITLE": "Kopyalama Hatası",
+      "DESCRIPTION": ""
+    },
+    "READ_WRITE_ERROR": {
+      "TITLE": "Okuma/Yazma Hatası",
+      "DESCRIPTION": "Dizinin doğru olduğundan veya yeterli okuma/yazma izinlerinizin bulunduğundan emin olun. \n({data})"
+    },
+    "TILE_SIZE_ERROR": {
+      "TITLE": "Hata",
+      "DESCRIPTION": "Karo boyutu yanlış. Lütfen ayarlarda karo boyutunu değiştirin veya 0 olarak ayarlayın. ({data})"
+    },
+    "EXCEPTION_ERROR": {
+      "TITLE": "İstinai Hata",
+      "DESCRIPTION": "Rescayl bir hata ile karşılaştı. Muhtemelen, upscayl ikili dosyası komutları düzgün şekilde çalıştırmayı başaramadı. Bilgi almak için log dosyalarını kontrol etmeyi deneyin."
+    },
+    "GENERIC_ERROR": {
+      "TITLE": "Hata"
+    },
+    "NO_OUTPUT_FOLDER_ERROR": {
+      "TITLE": "Çıktı klasörü seç",
+      "DESCRIPTION": "Lütfen önce bir çıktı klasörü seçin."
+    },
+    "INVALID_IMAGE_ERROR": {
+      "TITLE": "Geçersiz görsel",
+      "DESCRIPTION": "Lütfen PNG, JPG, JPEG, JFIF veya WEBP gibi geçerli uzantıya sahip bir görsel seçin veya yapıştırın,",
+      "ADDITIONAL_DESCRIPTION": "Lütfen bir görseli sürükleyip bırakın.",
+      "CLIPBOARD_DESCRIPTION": "Panoda yapıştıracak görsel bulunamadı!"
+    },
+    "NO_IMAGE_ERROR": {
+      "TITLE": "Görsel seçilmedi",
+      "DESCRIPTION": "Lütfen iyileştirilecek bir görsel seçin."
+    },
+    "METADATA_ERROR": {
+      "TITLE": "Meta Veri Kopyalama Hatası",
+      "DESCRIPTION": "Orijinal görüntüden oluşturulan görüntüye meta veriler kopyalanamadı. ({data})"
+    }
+  },
+  "WARNING": {
+    "GENERIC_WARNING": {
+      "TITLE": "Uyarı"
+    },
+    "METADATA_FORMAT": {
+      "TITLE": "Meta Veri Uyarısı",
+      "DESCRIPTION": "Bazı sistemlerde, JPG dışındaki formatlarda meta veriler görüntülenemeyebilir. Gerekirse meta verileri görüntülemek için özel araçlar kullanın."
+    }
+  },
+  "UPSCAYL_CLOUD": {
+    "COMING_SOON": "Yakında sizlerle!",
+    "CATCHY_PHRASE_1": "Artık hatalar, donanım uyuşmazlıkları, kalite tavizleri ya da uzun yükleme süreleri yok!",
+    "CATCHY_PHRASE_2": "🌐 Rescayl her yerde, her zaman , her cihazda\n☁️ Ekran kartına ya da donanıma gerek yok.\n👩 Yüz güzelleştirici\n🦋 Seçilebilecek 10 model ve fazlası\n🏎 Rescayl Desktop'tan 5 kat daha hızlı\n🎞 Video İyileştirici\n💰 Ticari Kullanım\n😴 Siz uyurken Rescayl",
+    "ALREADY_REGISTERED_ALERT": "Teşekkürler {name}! Görünüşe göre e-postanı zaten kaydetmişiz :D Eğer bu bir hata ise, tekrar deneyin.",
+    "ADD_SUCCESS": "Bekleme listesine katıldığın için teşekkürler! Rescayl Cloud senin için hazır olduğunda mutlaka ulaşacağız!",
+    "INCORRECT_FIELDS_ALERT": "Lütfen tüm alanları tam doldurun.",
+    "JOIN_WAITLIST": "Bekleme listesine yazıl",
+    "DONT_SHOW_AGAIN": "BİR DAHA GÖSTERME"
+  },
+  "ONBOARDING_DIALOG": {
+    "NEXT_BUTTON_TITLE": "Sonraki",
+    "BACK_BUTTON_TITLE": "Önceki",
+    "GET_STARTED_BUTTON_TITLE": "Başlayın",
+    "SETTINGS_NOTE": "Tüm bu ayarları istersen sonra değiştirebilirsin.",
+    "STEP_1": {
+      "TITLE": "Rescayl'e hoş geldiniz! 🎉",
+      "DESCRIPTION": "Hadi sizi bir kaç adımda hazır edelim."
+    },
+    "STEP_2": {
+      "TITLE": "Tercihlerinizi belirtin 🎨",
+      "DESCRIPTION": "Ön ayarlarınızı yapılandırın."
+    },
+    "STEP_3": {
+      "TITLE": "Hazır ve nazırsınız! 🎉",
+      "DESCRIPTION": "Rescayl ile görsellerinizi iyileştirmeye hazırsınız!"
+    }
+  }
+}

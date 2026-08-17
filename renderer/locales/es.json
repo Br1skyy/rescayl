@@ -1,0 +1,346 @@
+{
+  "TITLE": "Rescayl",
+  "INTRO": "¡Presentamos Rescayl Cloud!",
+  "HEADER": {
+    "DESCRIPTION": "Aumentador de imágenes con AI"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "Copyright ©"
+  },
+  "SETTINGS": {
+    "TITLE": "Ajustes",
+    "CHANGE_LANGUAGE": {
+      "TITLE": "Cambiar idioma"
+    },
+    "IMAGE_COMPRESSION": {
+      "TITLE": "Compresión de imagen",
+      "DESCRIPTION": "La compresión PNG es sin pérdida, por lo que puede que no reduzca el tamaño del archivo significativamente y los valores de compresión más altos podrían afectar el rendimiento. La compresión JPG y WebP es con pérdida."
+    },
+    "CUSTOM_MODELS": {
+      "TITLE": "AÑADIR MODELOS PERSONALIZADOS",
+      "BUTTON_FOLDER": "Seleccionar carpeta",
+      "DESCRIPTION": "Puedes añadir tus propios modelos fácilmente. Para más detalles:"
+    },
+    "CUSTOM_INPUT_RESOLUTION": {
+      "TITLE": "ANCHO DE SALIDA PERSONALIZADO",
+      "RESTART": "REQUIERE REINICIO",
+      "DESCRIPTION": "Usa un ancho personalizado para las imágenes de salida. La altura se ajustará automáticamente. Al habilitar esto, se anulará la configuración de escala."
+    },
+    "GPU_ID_INPUT": {
+      "TITLE": "ID de GPU",
+      "DESCRIPTION": "Por favor, lee la documentación de Rescayl para más información.",
+      "ADDITIONAL_DESCRIPTION": "Habilita el modo de rendimiento en Windows para obtener mejores resultados."
+    },
+    "IMAGE_FORMAT": {
+      "TITLE": "GUARDAR IMAGEN COMO",
+      "PNG": "PNG",
+      "JPG": "JPG",
+      "WEBP": "WEBP"
+    },
+    "COPY_METADATA": {
+      "TITLE": "COPIAR METADATOS DE IMAGEN",
+      "DESCRIPTION": "Mantener los metadatos originales de la imagen (EXIF) en la imagen aumentada.",
+      "SUGGEST_JPG_TITLE": "Cambio de Formato Recomendado",
+      "SUGGEST_JPG_DESCRIPTION": "Para una mejor compatibilidad de metadatos entre diferentes sistemas, recomendamos usar el formato JPG. ¿Desea cambiar?",
+      "CHANGE_TO_JPG": "Cambiar a JPG",
+      "KEEP_CURRENT_FORMAT": "Mantener {format}"
+    },
+    "IMAGE_SCALE": {
+      "TITLE": "Escala de imagen",
+      "DESCRIPTION": "Cualquier cosa por encima de 4X (excepto 16X Double Rescayl) solo redimensiona la imagen y no usa aumento con IA.",
+      "WARNING": "¡Cualquier cosa por encima de 5X puede causar problemas de rendimiento en algunos dispositivos!",
+      "ADDITIONAL_WARNING": "¡Esto puede causar problemas de rendimiento en algunos dispositivos!"
+    },
+    "LOG_AREA": {
+      "ON_COPY": "COPIADO ✅",
+      "BUTTON_TITLE": "COPIAR REGISTROS 📋",
+      "NO_LOGS": "No hay registros para mostrar"
+    },
+    "OVERWRITE_TOGGLE": {
+      "TITLE": "SOBREESCRIBIR AUMENTO ANTERIOR",
+      "DESCRIPTION": "Si está habilitado, Rescayl procesará la imagen de nuevo en lugar de cargarla directamente."
+    },
+    "RESET_SETTINGS": {
+      "BUTTON_TITLE": "REINICIAR UPSCAYL",
+      "ALERT": "Rescayl ha sido reiniciado. Por favor, reinicia la aplicación."
+    },
+    "SAVE_OUTPUT_FOLDER": {
+      "TITLE": "GUARDAR CARPETA DE SALIDA",
+      "DESCRIPTION": "Si está habilitado, la carpeta de salida se recordará entre sesiones."
+    },
+    "AUTO_UPDATE": {
+      "TITLE": "ACTUALIZACIÓN AUTOMÁTICA DE UPSCAYL",
+      "DESCRIPTION": "Si está habilitado, la aplicación buscará nuevas actualizaciones y te notificará."
+    },
+    "ENABLE_CONTRIBUTION": {
+      "TITLE": "AYUDA A MEJORAR UPSCAYL",
+      "DESCRIPTION": "Si está habilitado, Rescayl recopilará datos de uso anónimos para mejorar la interfaz y las características de la aplicación."
+    },
+    "THEME": {
+      "TITLE": "TEMA DE UPSCAYL"
+    },
+    "LANGUAGE": {
+      "TITLE": "IDIOMA DE UPSCAYL"
+    },
+    "CUSTOM_TILE_SIZE": {
+      "TITLE": "TAMAÑO DE MOSAICO PERSONALIZADO",
+      "DESCRIPTION": "Usa un tamaño de mosaico personalizado para segmentar la imagen. Esto puede ayudar a procesar las imágenes más rápido al reducir el número de mosaicos generados."
+    },
+    "TURN_OFF_NOTIFICATIONS": {
+      "TITLE": "APAGAR NOTIFICACIONES",
+      "DESCRIPTION": "Si está habilitado, Rescayl no enviará notificaciones del sistema al tener éxito o fallar."
+    },
+    "TTA_MODE": {
+      "TITLE": "Modo TTA",
+      "DESCRIPTION": "Habilita la Aumentación en Tiempo de Prueba para obtener mejores resultados, como eliminar artefactos, ¡PERO esto aumentará el tiempo de procesamiento en 8x!"
+    },
+    "SYSTEM_INFO": {
+      "TITLE": "Información del sistema"
+    },
+    "PRESERVE_FILENAME": {
+      "TITLE": "PRESERVE ORIGINAL FILENAME",
+      "DESCRIPTION": "If enabled, the upscaled image keeps the original filename instead of appending the scale and model."
+    }
+  },
+  "APP": {
+    "TITLE": "Rescayl",
+    "BATCH_MODE": {
+      "TITLE": "Aumento por lotes",
+      "DESCRIPTION": "Esto te permitirá aumentar todas las imágenes en una carpeta a la vez"
+    },
+    "FILE_SELECTION": {
+      "TITLE": "Paso 1",
+      "BATCH_MODE_TYPE": "Seleccionar carpeta",
+      "SINGLE_MODE_TYPE": "Seleccionar imagen"
+    },
+    "MODEL_SELECTION": {
+      "TITLE": "Paso 2",
+      "DESCRIPTION": "Seleccionar modelo de IA",
+      "IMPORTED_CUSTOM_MODELS": "Modelos personalizados importados",
+      "BEFORE": "Antes",
+      "AFTER": "Después",
+      "ZOOM": "Zoom",
+      "MODELS": {
+        "upscayl-standard-4x": {
+          "NAME": "Rescayl Estándar",
+          "DESCRIPTION": "Adecuado para la mayoría de las imágenes."
+        },
+        "upscayl-lite-4x": {
+          "NAME": "Rescayl Lite",
+          "DESCRIPTION": "Adecuado para la mayoría de las imágenes. Aumento de velocidad alta con mínima pérdida de calidad."
+        },
+        "remacri-4x": {
+          "id": "remacri-4x",
+          "NAME": "Remacri (No Comercial)",
+          "DESCRIPTION": "Para imágenes naturales. Añade nitidez y detalle. No uso comercial."
+        },
+        "ultramix-balanced-4x": {
+          "NAME": "Ultramix (No Comercial)",
+          "DESCRIPTION": "Para imágenes naturales con un equilibrio de nitidez y detalle."
+        },
+        "ultrasharp-4x": {
+          "NAME": "Ultranítido (No Comercial)",
+          "DESCRIPTION": "Para imágenes naturales con un enfoque en la nitidez."
+        },
+        "digital-art-4x": {
+          "NAME": "Arte Digital",
+          "DESCRIPTION": "Para arte digital e ilustraciones."
+        },
+        "high-fidelity-4x": {
+          "NAME": "Alta Fidelidad",
+          "DESCRIPTION": "Para todo tipo de imágenes con un enfoque en detalles realistas y texturas suaves."
+        },
+        "realesr-animevideov3-x2": {
+          "NAME": "Anime Video (2x)",
+          "DESCRIPTION": "For anime and stylized content. Fast 2x upscaling with good quality."
+        },
+        "realesr-animevideov3-x3": {
+          "NAME": "Anime Video (3x)",
+          "DESCRIPTION": "For anime and stylized content. 3x upscaling with balanced quality."
+        },
+        "realesr-animevideov3-x4": {
+          "NAME": "Anime Video (4x)",
+          "DESCRIPTION": "For anime and stylized content. 4x upscaling for maximum detail."
+        }
+      }
+    },
+    "DOUBLE_UPSCAYL": {
+      "TITLE": "Doble Rescayl",
+      "DESCRIPTION": "Habilita esta opción para realizar dos aumentos en una imagen. Ten en cuenta que esto puede causar un aumento significativo en el tiempo de procesamiento y posiblemente problemas de rendimiento para escalas superiores a 4X."
+    },
+    "OUTPUT_PATH_SELECTION": {
+      "TITLE": "Paso 3",
+      "MAC_APP_STORE_ALERT": "Debido a las restricciones de seguridad de la MacOS App Store, Rescayl requiere que selecciones una carpeta de salida cada vez que lo inicies.\n\nPara evitar esto, puedes guardar permanentemente una carpeta de salida predeterminada en la pestaña 'Ajustes' de Rescayl.",
+      "NOT_SELECTED": "No seleccionado",
+      "DEFAULT_IMG_PATH": "Ruta predeterminada de la imagen",
+      "DEFAULT_FOLDER_PATH": "Ruta predeterminada de la carpeta",
+      "BUTTON_TITLE": "Establecer carpeta de salida"
+    },
+    "SCALE_SELECTION": {
+      "TITLE": "Paso 4",
+      "FROM_TITLE": "Aumentar desde ",
+      "TO_TITLE": " a ",
+      "NO_OUTPUT_FOLDER_ALERT": "Por favor, selecciona primero una carpeta de salida",
+      "START_BUTTON_TITLE": "Rescayl 🚀",
+      "IN_PROGRESS_BUTTON_TITLE": "Aumentando ⏳"
+    },
+    "MORE_OPTIONS_DRAWER": {
+      "RESET_BUTTON_TITLE": "Restablecer imagen",
+      "LENS_VIEW_TITLE": "Vista de lente",
+      "SLIDER_VIEW_TITLE": "Vista de deslizador",
+      "ZOOM_AMOUNT_TITLE": "Cantidad de zoom",
+      "TOTAL_UPSCAYLS": "Total de aumentos",
+      "TOTAL_BATCH_UPSCAYLS": "Total de aumentos por lotes",
+      "TOTAL_IMAGE_UPSCAYLS": "Total de imágenes aumentadas",
+      "TOTAL_DOUBLE_UPSCAYLS": "Total de dobles aumentos",
+      "AVERAGE_UPSCAYL_TIME": "Tiempo promedio de aumento",
+      "LAST_UPSCAYL_DURATION": "Duración del último aumento",
+      "LAST_USED_AT": "Último uso"
+    },
+    "PROGRESS_BAR": {
+      "BATCH_UPSCAYL_IN_PROGRESS_TITLE": "Aumento por lotes en progreso:",
+      "IN_PROGRESS_TITLE": "Haciendo la magia de Rescayl...",
+      "STOP_BUTTON_TITLE": "DETENER"
+    },
+    "RESET_BUTTON_TITLE": "Restablecer",
+    "RIGHT_PANE_INFO": {
+      "SELECT_FOLDER": "Selecciona una carpeta",
+      "SELECT_IMAGE": "Selecciona una imagen",
+      "SELECT_FOLDER_DESCRIPTION": "Asegúrate de que la carpeta no contenga nada excepto imágenes PNG, JPG, JPEG y WEBP.",
+      "SELECT_IMAGES_DESCRIPTION": "Selecciona o arrastra y suelta una imagen PNG, JPG, JPEG o WEBP.",
+      "PASTE_IMAGE_DESCRIPTION": "Presiona Ctrl+V o ⌘+V para pegar la imagen desde el portapapeles"
+    },
+    "PROGRESS": {
+      "PROCESSING_TITLE": "Procesando la imagen...",
+      "SCALING_CONVERTING_TITLE": "Escalando y convirtiendo la imagen...",
+      "WAIT_TITLE": "Espera un momento...",
+      "SUCCESS_TITLE": "¡Aumento exitoso!",
+      "BATCH": {
+        "SELECTED_FOLDER_TITLE": "Carpeta seleccionada:",
+        "DONE_TITLE": "¡Todo listo!",
+        "OPEN_UPSCAYLED_FOLDER_TITLE": "Abrir carpeta con imágenes aumentadas"
+      }
+    },
+    "SLIDER": {
+      "ORIGINAL_TITLE": "Original",
+      "UPSCAYLED_TITLE": "Aumentado"
+    },
+    "DIALOG_BOX": {
+      "CLOSE": "Cerrar"
+    },
+    "BG_REMOVAL": {
+      "TITLE": "Background Removal",
+      "DESCRIPTION": "Automatically remove the background from your images before or after upscaling.",
+      "MODEL_TITLE": "Background Removal Model",
+      "MODEL_DESCRIPTION": "Select AI Model",
+      "REQUIRES_PYTHON": "Background removal requires Python with the 'rembg' package installed (pip install rembg onnxruntime). The model is downloaded on first use.",
+      "OPTIONS": {
+        "OFF": "Off",
+        "BEFORE": "Remove background before upscaling",
+        "AFTER": "Remove background after upscaling"
+      },
+      "MODELS": {
+        "u2netp": {
+          "NAME": "U2Net Portrait (Fast)",
+          "DESCRIPTION": "Lightweight and fast. Good balance of speed and quality for most subjects."
+        },
+        "u2net": {
+          "NAME": "U2Net",
+          "DESCRIPTION": "General purpose background removal with high quality results."
+        },
+        "isnet-general-use": {
+          "NAME": "ISNet General",
+          "DESCRIPTION": "High quality segmentation for general subjects, especially people."
+        },
+        "isnet-anime": {
+          "NAME": "ISNet Anime",
+          "DESCRIPTION": "Tuned for anime and illustration art."
+        },
+        "bria-rmbg-1.4": {
+          "NAME": "BRIA RMBG 1.4",
+          "DESCRIPTION": "Photorealistic background removal with excellent edge detail."
+        }
+      }
+    }
+  },
+  "ERRORS": {
+    "GPU_ERROR": {
+      "TITLE": "Error de GPU",
+      "DESCRIPTION": "Se encontró un problema con la GPU. Por favor, lee la documentación para solucionar problemas. ({data})"
+    },
+    "COPY_ERROR": {
+      "TITLE": "Error de copiado",
+      "DESCRIPTION": ""
+    },
+    "READ_WRITE_ERROR": {
+      "TITLE": "Error de lectura/escritura",
+      "DESCRIPTION": "Asegúrate de que la ruta sea correcta y que tengas los permisos adecuados de lectura/escritura \n({data})"
+    },
+    "TILE_SIZE_ERROR": {
+      "TITLE": "Error",
+      "DESCRIPTION": "El tamaño del mosaico es incorrecto. Cambia el tamaño del mosaico en los ajustes o configúralo en 0 ({data})"
+    },
+    "EXCEPTION_ERROR": {
+      "TITLE": "Error de excepción",
+      "DESCRIPTION": "Rescayl encontró un error. Es posible que el binario de Rescayl no haya ejecutado los comandos correctamente. Intenta revisar los registros para ver si obtienes alguna información."
+    },
+    "GENERIC_ERROR": {
+      "TITLE": "Error"
+    },
+    "NO_OUTPUT_FOLDER_ERROR": {
+      "TITLE": "Establecer carpeta de salida",
+      "DESCRIPTION": "Por favor, selecciona primero una carpeta de salida"
+    },
+    "INVALID_IMAGE_ERROR": {
+      "TITLE": "Imagen inválida",
+      "DESCRIPTION": "Por favor, selecciona/pega una imagen con una extensión válida como PNG, JPG, JPEG, JFIF o WEBP.",
+      "ADDITIONAL_DESCRIPTION": "Por favor, arrastra y suelta una imagen",
+      "CLIPBOARD_DESCRIPTION": "¡No se encontró ningún archivo de imagen en el portapapeles para pegar!"
+    },
+    "NO_IMAGE_ERROR": {
+      "TITLE": "No se ha seleccionado imagen",
+      "DESCRIPTION": "Por favor, selecciona una imagen para aumentar"
+    },
+    "METADATA_ERROR": {
+      "TITLE": "Error de Copia de Metadatos",
+      "DESCRIPTION": "No se pudieron copiar los metadatos de la imagen original a la imagen generada. ({data})"
+    }
+  },
+  "WARNING": {
+    "GENERIC_WARNING": {
+      "TITLE": "Advertencia"
+    },
+    "METADATA_FORMAT": {
+      "TITLE": "Advertencia de metadatos",
+      "DESCRIPTION": "En algunos sistemas, los metadatos pueden no ser visibles en formatos distintos a JPG. Usa herramientas específicas para ver los metadatos si es necesario."
+    }
+  },
+  "UPSCAYL_CLOUD": {
+    "COMING_SOON": "¡Próximamente!",
+    "CATCHY_PHRASE_1": "¡No más errores, problemas de hardware, compromisos de calidad o largos tiempos de carga!",
+    "CATCHY_PHRASE_2": "🌐 Aumenta en cualquier lugar, en cualquier momento, en cualquier dispositivo\n☁️ No se requiere tarjeta gráfica ni hardware\n👩 Mejora de rostros\n🦋 Más de 10 modelos para elegir\n🏎 5 veces más rápido que Rescayl Desktop\n🎞 Aumento de videos\n💰 Uso comercial\n😴 Aumenta mientras duermes",
+    "ALREADY_REGISTERED_ALERT": "¡Gracias {name}! Parece que tu correo electrónico ya ha sido registrado :D Si no es así, por favor intenta de nuevo.",
+    "ADD_SUCCESS": "¡Gracias por unirte a la lista de espera! Te notificaremos cuando Rescayl Cloud esté listo para ti.",
+    "INCORRECT_FIELDS_ALERT": "Por favor, completa todos los campos correctamente.",
+    "JOIN_WAITLIST": "Únete a la lista de espera",
+    "DONT_SHOW_AGAIN": "NO MOSTRAR DE NUEVO"
+  },
+  "ONBOARDING_DIALOG": {
+    "NEXT_BUTTON_TITLE": "Siguiente",
+    "BACK_BUTTON_TITLE": "Atrás",
+    "GET_STARTED_BUTTON_TITLE": "Comenzar",
+    "SETTINGS_NOTE": "Siempre puedes cambiar estos ajustes más tarde.",
+    "STEP_1": {
+      "TITLE": "Bienvenido a Rescayl 🎉",
+      "DESCRIPTION": "Vamos a empezar con unos pocos pasos rápidos."
+    },
+    "STEP_2": {
+      "TITLE": "Elige tus preferencias 🎨",
+      "DESCRIPTION": "Configura tus ajustes iniciales."
+    },
+    "STEP_3": {
+      "TITLE": "¡Todo listo! 🎉",
+      "DESCRIPTION": "¡Estás listo para empezar a aumentar imágenes con Rescayl!"
+    }
+  }
+}

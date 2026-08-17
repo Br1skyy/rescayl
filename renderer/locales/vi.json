@@ -1,0 +1,345 @@
+{
+  "TITLE": "Rescayl",
+  "INTRO": "Giới thiệu Rescayl Cloud!",
+  "HEADER": {
+    "DESCRIPTION": "Tăng cường hình ảnh AI"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "Bản quyền ©"
+  },
+  "SETTINGS": {
+    "TITLE": "Cài đặt",
+    "CHANGE_LANGUAGE": {
+      "TITLE": "Thay đổi ngôn ngữ"
+    },
+    "IMAGE_COMPRESSION": {
+      "TITLE": "Nén hình ảnh",
+      "DESCRIPTION": "Nén PNG là không mất mát, vì vậy có thể không giảm kích thước tệp một cách đáng kể và các giá trị nén cao hơn có thể ảnh hưởng đến hiệu suất. Nén JPG và WebP là có mất mát."
+    },
+    "CUSTOM_MODELS": {
+      "TITLE": "THÊM MÔ HÌNH TÙY CHỈNH",
+      "BUTTON_FOLDER": "Chọn thư mục",
+      "DESCRIPTION": "Bạn có thể thêm mô hình của riêng mình một cách dễ dàng. Để biết thêm chi tiết:"
+    },
+    "CUSTOM_INPUT_RESOLUTION": {
+      "TITLE": "CHIỀU RỘNG ĐẦU RA TÙY CHỈNH",
+      "RESTART": "YÊU CẦU KHỞI ĐỘNG LẠI",
+      "DESCRIPTION": "Sử dụng chiều rộng tùy chỉnh cho các hình ảnh đầu ra. Chiều cao sẽ tự động được điều chỉnh. Việc kích hoạt tùy chọn này sẽ ghi đè cài đặt tỷ lệ."
+    },
+    "GPU_ID_INPUT": {
+      "TITLE": "ID GPU",
+      "DESCRIPTION": "Vui lòng đọc Tài liệu Rescayl để biết thêm thông tin.",
+      "ADDITIONAL_DESCRIPTION": "Kích hoạt chế độ hiệu suất trên Windows để có kết quả tốt hơn."
+    },
+    "IMAGE_FORMAT": {
+      "TITLE": "LƯU HÌNH ẢNH DƯỚI DẠNG",
+      "PNG": "PNG",
+      "JPG": "JPG",
+      "WEBP": "WEBP"
+    },
+    "COPY_METADATA": {
+      "TITLE": "SAO CHÉP METADATA ẢNH",
+      "DESCRIPTION": "Giữ metadata gốc của ảnh (EXIF) trong ảnh đã được nâng cao.",
+      "SUGGEST_JPG_TITLE": "Đề Xuất Thay Đổi Định Dạng",
+      "SUGGEST_JPG_DESCRIPTION": "Để có khả năng tương thích metadata tốt hơn trên các hệ thống khác nhau, chúng tôi khuyên bạn nên sử dụng định dạng JPG. Bạn có muốn thay đổi không?",
+      "CHANGE_TO_JPG": "Chuyển sang JPG",
+      "KEEP_CURRENT_FORMAT": "Giữ {format}"
+    },
+    "IMAGE_SCALE": {
+      "TITLE": "Tỷ lệ Hình ảnh",
+      "DESCRIPTION": "Bất kỳ tỷ lệ nào trên 4X (ngoại trừ 16X Double Rescayl) chỉ thay đổi kích thước hình ảnh mà không sử dụng tăng cường AI.",
+      "WARNING": "Bất kỳ tỷ lệ nào trên 5X có thể gây ra vấn đề về hiệu suất trên một số thiết bị!",
+      "ADDITIONAL_WARNING": "Điều này có thể gây ra vấn đề về hiệu suất trên một số thiết bị!"
+    },
+    "LOG_AREA": {
+      "ON_COPY": "ĐÃ SAO CHÉP ✅",
+      "BUTTON_TITLE": "SAO CHÉP NHẬT KÝ 📋",
+      "NO_LOGS": "Không có nhật ký để hiển thị"
+    },
+    "OVERWRITE_TOGGLE": {
+      "TITLE": "GHI ĐÈ UPSCALE TRƯỚC ĐÓ",
+      "DESCRIPTION": "Nếu được kích hoạt, Rescayl sẽ xử lý lại hình ảnh thay vì tải nó trực tiếp."
+    },
+    "RESET_SETTINGS": {
+      "BUTTON_TITLE": "ĐẶT LẠI UPSCAYL",
+      "ALERT": "Rescayl đã được đặt lại. Vui lòng khởi động lại ứng dụng."
+    },
+    "SAVE_OUTPUT_FOLDER": {
+      "TITLE": "LƯU THƯ MỤC ĐẦU RA",
+      "DESCRIPTION": "Nếu được kích hoạt, thư mục đầu ra sẽ được ghi nhớ giữa các phiên làm việc."
+    },
+    "AUTO_UPDATE": {
+      "TITLE": "CẬP NHẬT TỰ ĐỘNG UPSCAYL",
+      "DESCRIPTION": "Nếu được kích hoạt, ứng dụng sẽ kiểm tra các bản cập nhật mới và thông báo cho bạn."
+    },
+    "ENABLE_CONTRIBUTION": {
+      "TITLE": "GIÚP CẢI THIỆN UPSCAYL",
+      "DESCRIPTION": "Nếu được kích hoạt, Rescayl sẽ thu thập dữ liệu sử dụng ẩn danh để cải thiện giao diện và các tính năng của ứng dụng."
+    },
+    "THEME": {
+      "TITLE": "CHỦ ĐỀ UPSCAYL"
+    },
+    "LANGUAGE": {
+      "TITLE": "NGÔN NGỮ UPSCAYL"
+    },
+    "CUSTOM_TILE_SIZE": {
+      "TITLE": "KÍCH THƯỚC GẠCH TÙY CHỈNH",
+      "DESCRIPTION": "Sử dụng kích thước gạch tùy chỉnh để phân đoạn hình ảnh. Điều này có thể giúp xử lý hình ảnh nhanh hơn bằng cách giảm số lượng gạch được tạo ra."
+    },
+    "TURN_OFF_NOTIFICATIONS": {
+      "TITLE": "TẮT THÔNG BÁO",
+      "DESCRIPTION": "Nếu được kích hoạt, Rescayl sẽ không gửi bất kỳ thông báo hệ thống nào về sự thành công hoặc thất bại."
+    },
+    "TTA_MODE": {
+      "TITLE": "Chế độ TTA",
+      "DESCRIPTION": "Kích hoạt Tăng cường Thời gian Kiểm tra để có kết quả tốt hơn, chẳng hạn như loại bỏ các hiện tượng, NHƯNG điều này sẽ làm tăng thời gian xử lý lên gấp 8 lần!"
+    },
+    "SYSTEM_INFO": {
+      "TITLE": "Thông tin Hệ thống"
+    },
+    "PRESERVE_FILENAME": {
+      "TITLE": "PRESERVE ORIGINAL FILENAME",
+      "DESCRIPTION": "If enabled, the upscaled image keeps the original filename instead of appending the scale and model."
+    }
+  },
+  "APP": {
+    "TITLE": "Rescayl",
+    "BATCH_MODE": {
+      "TITLE": "Batch Rescayl",
+      "DESCRIPTION": "Điều này sẽ cho phép bạn Rescayl tất cả các tệp trong một thư mục cùng một lúc"
+    },
+    "FILE_SELECTION": {
+      "TITLE": "Bước 1",
+      "BATCH_MODE_TYPE": "Chọn Thư mục",
+      "SINGLE_MODE_TYPE": "Chọn Hình ảnh"
+    },
+    "MODEL_SELECTION": {
+      "TITLE": "Bước 2",
+      "DESCRIPTION": "Chọn Mô hình AI",
+      "IMPORTED_CUSTOM_MODELS": "Mô hình Tùy chỉnh Nhập khẩu",
+      "BEFORE": "Trước",
+      "AFTER": "Sau",
+      "ZOOM": "Phóng to",
+      "MODELS": {
+        "upscayl-standard-4x": {
+          "NAME": "Rescayl Standard",
+          "DESCRIPTION": "Phù hợp với hầu hết các hình ảnh."
+        },
+        "upscayl-lite-4x": {
+          "NAME": "Rescayl Lite",
+          "DESCRIPTION": "Phù hợp với hầu hết các hình ảnh. Tăng cường tốc độ cao với tổn thất chất lượng tối thiểu."
+        },
+        "remacri-4x": {
+          "NAME": "Remacri (Không thương mại)",
+          "DESCRIPTION": "Dành cho hình ảnh tự nhiên. Tăng thêm độ sắc nét và chi tiết. Không sử dụng cho mục đích thương mại."
+        },
+        "ultramix-balanced-4x": {
+          "NAME": "Ultramix (Không thương mại)",
+          "DESCRIPTION": "Dành cho hình ảnh tự nhiên với sự cân bằng giữa độ sắc nét và chi tiết."
+        },
+        "ultrasharp-4x": {
+          "NAME": "Ultrasharp (Không thương mại)",
+          "DESCRIPTION": "Dành cho hình ảnh tự nhiên tập trung vào độ sắc nét."
+        },
+        "digital-art-4x": {
+          "NAME": "Nghệ thuật Kỹ thuật số",
+          "DESCRIPTION": "Dành cho nghệ thuật kỹ thuật số và minh họa."
+        },
+        "high-fidelity-4x": {
+          "NAME": "Độ trung thực cao",
+          "DESCRIPTION": "Dành cho tất cả các loại hình ảnh với sự tập trung vào chi tiết thực tế và kết cấu mượt mà."
+        },
+        "realesr-animevideov3-x2": {
+          "NAME": "Anime Video (2x)",
+          "DESCRIPTION": "For anime and stylized content. Fast 2x upscaling with good quality."
+        },
+        "realesr-animevideov3-x3": {
+          "NAME": "Anime Video (3x)",
+          "DESCRIPTION": "For anime and stylized content. 3x upscaling with balanced quality."
+        },
+        "realesr-animevideov3-x4": {
+          "NAME": "Anime Video (4x)",
+          "DESCRIPTION": "For anime and stylized content. 4x upscaling for maximum detail."
+        }
+      }
+    },
+    "DOUBLE_UPSCAYL": {
+      "TITLE": "Double Rescayl",
+      "DESCRIPTION": "Kích hoạt tùy chọn này để chạy Rescayl hai lần trên một hình ảnh. Lưu ý rằng điều này có thể làm tăng đáng kể thời gian xử lý và có thể gây ra vấn đề hiệu suất cho các tỷ lệ lớn hơn 4X."
+    },
+    "OUTPUT_PATH_SELECTION": {
+      "TITLE": "Bước 3",
+      "MAC_APP_STORE_ALERT": "Do các hạn chế bảo mật của MacOS App Store, Rescayl yêu cầu bạn chọn một thư mục đầu ra mỗi lần bạn khởi động nó.\n\nĐể tránh điều này, bạn có thể lưu một thư mục đầu ra mặc định một cách vĩnh viễn trong tab 'Cài đặt' của Rescayl.",
+      "NOT_SELECTED": "Chưa chọn",
+      "DEFAULT_IMG_PATH": "Mặc định là Đường dẫn của Hình ảnh",
+      "DEFAULT_FOLDER_PATH": "Mặc định là Đường dẫn của Thư mục",
+      "BUTTON_TITLE": "Đặt Thư mục Đầu Ra"
+    },
+    "SCALE_SELECTION": {
+      "TITLE": "Bước 4",
+      "FROM_TITLE": "Rescayl từ ",
+      "TO_TITLE": " đến ",
+      "NO_OUTPUT_FOLDER_ALERT": "Vui lòng chọn một thư mục đầu ra trước",
+      "START_BUTTON_TITLE": "Rescayl 🚀",
+      "IN_PROGRESS_BUTTON_TITLE": "Đang tiến hành Rescayl ⏳"
+    },
+    "MORE_OPTIONS_DRAWER": {
+      "RESET_BUTTON_TITLE": "Đặt Lại Hình Ảnh",
+      "LENS_VIEW_TITLE": "Chế độ Ống kính",
+      "SLIDER_VIEW_TITLE": "Chế độ Trượt",
+      "ZOOM_AMOUNT_TITLE": "Số lượng Phóng to",
+      "TOTAL_UPSCAYLS": "Tổng số Rescayls",
+      "TOTAL_BATCH_UPSCAYLS": "Tổng số Batch Rescayls",
+      "TOTAL_IMAGE_UPSCAYLS": "Tổng số Rescayls Hình Ảnh",
+      "TOTAL_DOUBLE_UPSCAYLS": "Tổng số Double Rescayls",
+      "AVERAGE_UPSCAYL_TIME": "Thời gian Rescayl Trung Bình",
+      "LAST_UPSCAYL_DURATION": "Thời gian Rescayl Cuối Cùng",
+      "LAST_USED_AT": "Lần Cuối Sử Dụng Tại"
+    },
+    "PROGRESS_BAR": {
+      "BATCH_UPSCAYL_IN_PROGRESS_TITLE": "Batch Rescayl Đang Tiến Hành:",
+      "IN_PROGRESS_TITLE": "Đang thực hiện phép màu Rescayl...",
+      "STOP_BUTTON_TITLE": "DỪNG"
+    },
+    "RESET_BUTTON_TITLE": "Đặt Lại",
+    "RIGHT_PANE_INFO": {
+      "SELECT_FOLDER": "Chọn một Thư mục",
+      "SELECT_IMAGE": "Chọn một Hình ảnh",
+      "SELECT_FOLDER_DESCRIPTION": "Đảm bảo rằng thư mục không chứa gì ngoài các hình ảnh PNG, JPG, JPEG & WEBP.",
+      "SELECT_IMAGES_DESCRIPTION": "Chọn hoặc kéo và thả một hình ảnh PNG, JPG, JPEG hoặc WEBP.",
+      "PASTE_IMAGE_DESCRIPTION": "Nhấn Ctrl+V hoặc ⌘+V để Dán hình ảnh từ Clipboard"
+    },
+    "PROGRESS": {
+      "PROCESSING_TITLE": "Đang xử lý hình ảnh...",
+      "SCALING_CONVERTING_TITLE": "Đang thay đổi kích thước và chuyển đổi hình ảnh...",
+      "WAIT_TITLE": "Chờ một chút...",
+      "SUCCESS_TITLE": "Rescayl Thành Công!",
+      "BATCH": {
+        "SELECTED_FOLDER_TITLE": "Thư mục đã chọn:",
+        "DONE_TITLE": "Tất cả đã xong!",
+        "OPEN_UPSCAYLED_FOLDER_TITLE": "Mở Thư mục Rescayled"
+      }
+    },
+    "SLIDER": {
+      "ORIGINAL_TITLE": "Gốc",
+      "UPSCAYLED_TITLE": "Đã Rescayl"
+    },
+    "DIALOG_BOX": {
+      "CLOSE": "Đóng"
+    },
+    "BG_REMOVAL": {
+      "TITLE": "Background Removal",
+      "DESCRIPTION": "Automatically remove the background from your images before or after upscaling.",
+      "MODEL_TITLE": "Background Removal Model",
+      "MODEL_DESCRIPTION": "Select AI Model",
+      "REQUIRES_PYTHON": "Background removal requires Python with the 'rembg' package installed (pip install rembg onnxruntime). The model is downloaded on first use.",
+      "OPTIONS": {
+        "OFF": "Off",
+        "BEFORE": "Remove background before upscaling",
+        "AFTER": "Remove background after upscaling"
+      },
+      "MODELS": {
+        "u2netp": {
+          "NAME": "U2Net Portrait (Fast)",
+          "DESCRIPTION": "Lightweight and fast. Good balance of speed and quality for most subjects."
+        },
+        "u2net": {
+          "NAME": "U2Net",
+          "DESCRIPTION": "General purpose background removal with high quality results."
+        },
+        "isnet-general-use": {
+          "NAME": "ISNet General",
+          "DESCRIPTION": "High quality segmentation for general subjects, especially people."
+        },
+        "isnet-anime": {
+          "NAME": "ISNet Anime",
+          "DESCRIPTION": "Tuned for anime and illustration art."
+        },
+        "bria-rmbg-1.4": {
+          "NAME": "BRIA RMBG 1.4",
+          "DESCRIPTION": "Photorealistic background removal with excellent edge detail."
+        }
+      }
+    }
+  },
+  "ERRORS": {
+    "GPU_ERROR": {
+      "TITLE": "Lỗi GPU",
+      "DESCRIPTION": "Gặp vấn đề với GPU. Vui lòng đọc tài liệu để khắc phục sự cố! ({data})"
+    },
+    "COPY_ERROR": {
+      "TITLE": "Lỗi Sao Chép",
+      "DESCRIPTION": ""
+    },
+    "READ_WRITE_ERROR": {
+      "TITLE": "Lỗi Đọc/Ghi",
+      "DESCRIPTION": "Đảm bảo rằng đường dẫn là chính xác và bạn có quyền đọc/ghi thích hợp \n({data})"
+    },
+    "TILE_SIZE_ERROR": {
+      "TITLE": "Lỗi",
+      "DESCRIPTION": "Kích thước gạch không đúng. Vui lòng thay đổi kích thước gạch trong cài đặt hoặc đặt là 0 ({data})"
+    },
+    "EXCEPTION_ERROR": {
+      "TITLE": "Lỗi Ngoại lệ",
+      "DESCRIPTION": "Rescayl gặp lỗi. Có thể, nhị phân Rescayl không thực hiện các lệnh đúng cách. Hãy kiểm tra nhật ký để xem bạn có thông tin gì không."
+    },
+    "GENERIC_ERROR": {
+      "TITLE": "Lỗi"
+    },
+    "NO_OUTPUT_FOLDER_ERROR": {
+      "TITLE": "Đặt Thư mục Đầu Ra",
+      "DESCRIPTION": "Vui lòng chọn một thư mục đầu ra trước"
+    },
+    "INVALID_IMAGE_ERROR": {
+      "TITLE": "Hình ảnh Không hợp lệ",
+      "DESCRIPTION": "Vui lòng chọn/dán một hình ảnh với định dạng hợp lệ như PNG, JPG, JPEG, JFIF hoặc WEBP.",
+      "ADDITIONAL_DESCRIPTION": "Vui lòng kéo và thả một hình ảnh",
+      "CLIPBOARD_DESCRIPTION": "Không tìm thấy tệp hình ảnh nào trong Clipboard để dán!"
+    },
+    "NO_IMAGE_ERROR": {
+      "TITLE": "Không có hình ảnh nào được chọn",
+      "DESCRIPTION": "Vui lòng chọn một hình ảnh để tăng cường"
+    },
+    "METADATA_ERROR": {
+      "TITLE": "Lỗi Sao Chép Metadata",
+      "DESCRIPTION": "Không thể sao chép metadata từ ảnh gốc sang ảnh đã tạo. ({data})"
+    }
+  },
+  "WARNING": {
+    "GENERIC_WARNING": {
+      "TITLE": "Cảnh báo"
+    },
+    "METADATA_FORMAT": {
+      "TITLE": "Cảnh báo về Metadata",
+      "DESCRIPTION": "Trên một số hệ thống, metadata có thể không hiển thị trong các định dạng khác ngoài JPG. Sử dụng các công cụ chuyên dụng để xem metadata nếu cần."
+    }
+  },
+  "UPSCAYL_CLOUD": {
+    "COMING_SOON": "Sẽ ra mắt sớm!",
+    "CATCHY_PHRASE_1": "Không còn lỗi, vấn đề phần cứng, thỏa hiệp chất lượng hoặc thời gian tải lâu!",
+    "CATCHY_PHRASE_2": "🌐 Rescayl bất cứ nơi nào, bất cứ lúc nào, trên bất cứ thiết bị nào\n☁️ Không cần Card Đồ họa hoặc phần mềm phần cứng\n👩 Tăng cường Khuôn mặt\n🦋 Hơn 10 mô hình để lựa chọn\n🏎 Nhanh hơn 5 lần so với Rescayl Desktop\n🎞 Tăng cường Video\n💰 Sử dụng Thương mại\n😴 Rescayl trong khi bạn ngủ",
+    "ALREADY_REGISTERED_ALERT": "Cảm ơn bạn {name}! Có vẻ như email của bạn đã được đăng ký rồi :D Nếu không phải vậy, vui lòng thử lại.",
+    "ADD_SUCCESS": "Cảm ơn bạn đã tham gia danh sách chờ! Chúng tôi sẽ thông báo khi Rescayl Cloud sẵn sàng cho bạn.",
+    "INCORRECT_FIELDS_ALERT": "Vui lòng điền đúng các trường thông tin.",
+    "JOIN_WAITLIST": "Tham gia danh sách chờ",
+    "DONT_SHOW_AGAIN": "KHÔNG HIỂN THỊ LẠI"
+  },
+  "ONBOARDING_DIALOG": {
+    "NEXT_BUTTON_TITLE": "Tiếp theo",
+    "BACK_BUTTON_TITLE": "Quay lại",
+    "GET_STARTED_BUTTON_TITLE": "Bắt đầu",
+    "SETTINGS_NOTE": "Bạn luôn có thể thay đổi các cài đặt này sau.",
+    "STEP_1": {
+      "TITLE": "Chào mừng đến với Rescayl 🎉",
+      "DESCRIPTION": "Hãy để chúng tôi giúp bạn bắt đầu với một vài bước nhanh chóng."
+    },
+    "STEP_2": {
+      "TITLE": "Chọn sở thích của bạn 🎨",
+      "DESCRIPTION": "Cấu hình cài đặt ban đầu của bạn."
+    },
+    "STEP_3": {
+      "TITLE": "Bạn đã sẵn sàng! 🎉",
+      "DESCRIPTION": "Bạn đã sẵn sàng để bắt đầu tăng cường hình ảnh với Rescayl!"
+    }
+  }
+}

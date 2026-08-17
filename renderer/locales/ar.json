@@ -1,0 +1,345 @@
+{
+  "TITLE": "ابسكيل",
+  "INTRO": "مقدمة لسحابة ابسكيل",
+  "HEADER": {
+    "DESCRIPTION": "ذكاء اصطناعي لزيادة دقة الصور"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "حقوق النشر ©"
+  },
+  "SETTINGS": {
+    "TITLE": "الاعدادات",
+    "CHANGE_LANGUAGE": {
+      "TITLE": "تغيير اللغة"
+    },
+    "IMAGE_COMPRESSION": {
+      "TITLE": "اختزال الصورة",
+      "DESCRIPTION": "صيغة png , ربما لن تؤثر على حجم الملف بشكل كبير و عملية الضغط القوية قد يؤثر على الاداء, JPG و WEBP صيغ تفقد جودتها"
+    },
+    "CUSTOM_MODELS": {
+      "TITLE": "أضف نموذجًا مخصصًا",
+      "BUTTON_FOLDER": "اختر مجلد",
+      "DESCRIPTION": "يمكنك اضافة نماذجك بسهولة, للمزيد من المعلومات:"
+    },
+    "CUSTOM_INPUT_RESOLUTION": {
+      "TITLE": "عرض مخصص للإخراج",
+      "RESTART": "طلب اعادة تشغيل",
+      "DESCRIPTION": "استخدام عرض مخصص للصورة, سيتم تعديل الطول بشكل تلقائي, تفعيل هذا الخيار سيبدل التحجيم الموضوع في الاعدادات"
+    },
+    "GPU_ID_INPUT": {
+      "TITLE": "فهرس وحدة معالجة الرسوم",
+      "DESCRIPTION": "لمعلومات اكثر اقرأ وثائقنا",
+      "ADDITIONAL_DESCRIPTION": "فعل وضعية الاداء على الويندوز لتحصل على نتائج افضل"
+    },
+    "IMAGE_FORMAT": {
+      "TITLE": "حفظ الصورة ك",
+      "PNG": "PNG",
+      "JPG": "JPG",
+      "WEBP": "WEBP"
+    },
+    "COPY_METADATA": {
+      "TITLE": "نسخ بيانات وصفية للصورة",
+      "DESCRIPTION": "احتفظ ببيانات الصورة الوصفية الأصلية (EXIF) في الصورة المحسنة.",
+      "SUGGEST_JPG_TITLE": "تغيير التنسيق المقترح",
+      "SUGGEST_JPG_DESCRIPTION": "للحصول على توافق أفضل للبيانات الوصفية بين الأنظمة المختلفة، نوصي باستخدام تنسيق JPG. هل تريد التغيير؟",
+      "CHANGE_TO_JPG": "تغيير إلى JPG",
+      "KEEP_CURRENT_FORMAT": "الاحتفاظ بـ {format}"
+    },
+    "IMAGE_SCALE": {
+      "TITLE": "تحجيم الصورة",
+      "DESCRIPTION": "اي حجم اكبر من 4 (ما عدا التحجيم المزدوج 16 ) سيتم تغيير حجم الصورة بدون استعمال الذكاء الاصطناعي",
+      "WARNING": "اي شيء اكثر من 5 سوف يسبب مشاكل في اداء الجهاز",
+      "ADDITIONAL_WARNING": "قد يسبب مشاكل اداء في بعض الاجهزة"
+    },
+    "LOG_AREA": {
+      "ON_COPY": "تم النسخ ✅",
+      "BUTTON_TITLE": "نسخ السجلات 📋",
+      "NO_LOGS": "لا يوجد سجلات للعرض"
+    },
+    "OVERWRITE_TOGGLE": {
+      "TITLE": "تبديل التحجيم الدقة السابق",
+      "DESCRIPTION": "ابسكيل سيعالج الصور مرة اخرى بدل من تحميلها مباشرا, اذا فعلت هذا"
+    },
+    "RESET_SETTINGS": {
+      "BUTTON_TITLE": "اعادة ضبط ابسكيل",
+      "ALERT": "لقد تم اعادة ضبط ابسكيل , يرجى اعادة تشغيل البرنامج"
+    },
+    "SAVE_OUTPUT_FOLDER": {
+      "TITLE": "مجلد حفظ النتائج",
+      "DESCRIPTION": "سيتم تذكر هذا المجلد في كل مرة , اذا فعلت هذا الخيار"
+    },
+    "AUTO_UPDATE": {
+      "TITLE": "تحديث تلقائي لابسكيل",
+      "DESCRIPTION": "سيتمم التحقق بشكل تلقائي للتحديثات , اذا فعلت هذا الخيار"
+    },
+    "ENABLE_CONTRIBUTION": {
+      "TITLE": "ساعدنا لتحسين ابسكيل",
+      "DESCRIPTION": "اذا فعلت هذا الخير يستم تجميع معلومات بشكل صامت لغرض تحسين الجودة"
+    },
+    "THEME": {
+      "TITLE": "مظهر ابسكيل"
+    },
+    "LANGUAGE": {
+      "TITLE": "لغة ابسكيل"
+    },
+    "CUSTOM_TILE_SIZE": {
+      "TITLE": "حجم مناطق مخصص",
+      "DESCRIPTION": "هذا الخيار سيساعد في تقليل المناطق المراد معالجتها, يزيد سرعة المعالجة"
+    },
+    "TURN_OFF_NOTIFICATIONS": {
+      "TITLE": "اطفئ الاشعارات",
+      "DESCRIPTION": "لن يتم ارسال اشعارات لإتمام العملية او فشلها , عند تشغيل هذا الخيار"
+    },
+    "TTA_MODE": {
+      "TITLE": "TTA وضعية",
+      "DESCRIPTION": "يساهم في اعطاء نتائج افضل و ازالة التشوهات ولكن! سيزيد وقت المعالجة ب8 اضعاف"
+    },
+    "SYSTEM_INFO": {
+      "TITLE": "معلومات النظام"
+    },
+    "PRESERVE_FILENAME": {
+      "TITLE": "PRESERVE ORIGINAL FILENAME",
+      "DESCRIPTION": "If enabled, the upscaled image keeps the original filename instead of appending the scale and model."
+    }
+  },
+  "APP": {
+    "TITLE": "ابسكيل",
+    "BATCH_MODE": {
+      "TITLE": "ابسكيل متعدد",
+      "DESCRIPTION": "يمكنك هذا الخيار ان تقوم بعملية تحجيم لعدد من الصور في وقت واحد"
+    },
+    "FILE_SELECTION": {
+      "TITLE": "الخطوة الأولة",
+      "BATCH_MODE_TYPE": "اختر مجلدا",
+      "SINGLE_MODE_TYPE": "اختر صورة"
+    },
+    "MODEL_SELECTION": {
+      "TITLE": "الخطوة الثانية",
+      "DESCRIPTION": "اختر نموذج الذكاء",
+      "IMPORTED_CUSTOM_MODELS": "استرد نموذج مخصص",
+      "BEFORE": "قبل",
+      "AFTER": "بعد",
+      "ZOOM": "تكبير",
+      "MODELS": {
+        "upscayl-standard-4x": {
+          "NAME": "ابسكيل الاعتيادي",
+          "DESCRIPTION": "يفضل لأغلب الصور"
+        },
+        "upscayl-lite-4x": {
+          "NAME": "ابسكيل المخفف",
+          "DESCRIPTION": "مناسب لاغلب الصور لاكن اسرع مع بعض خسائر في الجودة"
+        },
+        "remacri-4x": {
+          "NAME": "Remacri (Non-Commercial)",
+          "DESCRIPTION": "للصور الطبيعة اضافة حدة "
+        },
+        "ultramix-balanced-4x": {
+          "NAME": "Ultramix (Non-Commercial)",
+          "DESCRIPTION": "للصور الطبيعية مع توازن في التفاصيل و الحدة"
+        },
+        "ultrasharp-4x": {
+          "NAME": "Ultrasharp (Non-Commercial)",
+          "DESCRIPTION": "للصور الطبيعية مع تركيز على الحدة"
+        },
+        "digital-art-4x": {
+          "NAME": "الرسم الرقمي",
+          "DESCRIPTION": "مناسب للرسم الرقمي"
+        },
+        "high-fidelity-4x": {
+          "NAME": "دقة عالية",
+          "DESCRIPTION": "لكل انواع الصور مع التركيز على واقعية التفاصيل و نعومة الاكساء"
+        },
+        "realesr-animevideov3-x2": {
+          "NAME": "Anime Video (2x)",
+          "DESCRIPTION": "For anime and stylized content. Fast 2x upscaling with good quality."
+        },
+        "realesr-animevideov3-x3": {
+          "NAME": "Anime Video (3x)",
+          "DESCRIPTION": "For anime and stylized content. 3x upscaling with balanced quality."
+        },
+        "realesr-animevideov3-x4": {
+          "NAME": "Anime Video (4x)",
+          "DESCRIPTION": "For anime and stylized content. 4x upscaling for maximum detail."
+        }
+      }
+    },
+    "DOUBLE_UPSCAYL": {
+      "TITLE": "تحجيم مزدوج",
+      "DESCRIPTION": "تفعيل هذا الخيار سيقوم بمضاعفة التحجيم , لكن سيسبب ضعف في الاداء بالأخص مع تحجيم 4 اضعاف"
+    },
+    "OUTPUT_PATH_SELECTION": {
+      "TITLE": "الخطوة الثالثة",
+      "MAC_APP_STORE_ALERT": " نظرا لنظام حماية apple ابسكيل يتطلب ان تحدد موقع الخزن في كل مرة\n\nلتخطي هذا يمكنك تحديده من الاعدادات",
+      "NOT_SELECTED": "غير محدد",
+      "DEFAULT_IMG_PATH": "حفظ في مكان الصورة المحددة",
+      "DEFAULT_FOLDER_PATH": "حفظ في نفس مكان المجلد",
+      "BUTTON_TITLE": "ضع موقع الاخراج"
+    },
+    "SCALE_SELECTION": {
+      "TITLE": "خطوة رابعة",
+      "FROM_TITLE": "حجم من ",
+      "TO_TITLE": " الى ",
+      "NO_OUTPUT_FOLDER_ALERT": "اختر مجلد الاخراج اولا",
+      "START_BUTTON_TITLE": "ابسكيل 🚀",
+      "IN_PROGRESS_BUTTON_TITLE": "تحجيم ⏳"
+    },
+    "MORE_OPTIONS_DRAWER": {
+      "RESET_BUTTON_TITLE": "اعادة ضبط الصورة",
+      "LENS_VIEW_TITLE": "وضع المكبرة",
+      "SLIDER_VIEW_TITLE": "وضع الشطر",
+      "ZOOM_AMOUNT_TITLE": "قوة التكبير",
+      "TOTAL_UPSCAYLS": "مجموع التحجيم",
+      "TOTAL_BATCH_UPSCAYLS": "مجموع الصور المتعددة المحجمة",
+      "TOTAL_IMAGE_UPSCAYLS": "مجموع الصور المحجمة",
+      "TOTAL_DOUBLE_UPSCAYLS": "مجموع التحجيم المزدوج",
+      "AVERAGE_UPSCAYL_TIME": "الوقت المتوسط للتحجيم",
+      "LAST_UPSCAYL_DURATION": "مدة اخر تحجيم",
+      "LAST_USED_AT": "اخر استخدام عند"
+    },
+    "PROGRESS_BAR": {
+      "BATCH_UPSCAYL_IN_PROGRESS_TITLE": "التحجيم المزدوج قيد العمل:",
+      "IN_PROGRESS_TITLE": "القيام ببعض السحر المحجم...",
+      "STOP_BUTTON_TITLE": "أيقاف"
+    },
+    "RESET_BUTTON_TITLE": "اعادة ضبط",
+    "RIGHT_PANE_INFO": {
+      "SELECT_FOLDER": "اختر مجلد",
+      "SELECT_IMAGE": "اختر صورة",
+      "SELECT_FOLDER_DESCRIPTION": "تأكد ان المجلد لا يحوي اي شيء ما عدى PNG, JPG, JPEG & WEBP images.",
+      "SELECT_IMAGES_DESCRIPTION": "اختر صورة او قم بسحب و الاسقاط",
+      "PASTE_IMAGE_DESCRIPTION": "اضغط Ctrl+V او ⌘+V للصق الصورة من المحفظة"
+    },
+    "PROGRESS": {
+      "PROCESSING_TITLE": "جار معالجة الصورة...",
+      "SCALING_CONVERTING_TITLE": "تحجيم و تحويل الصورة...",
+      "WAIT_TITLE": "انتظر...",
+      "SUCCESS_TITLE": "تم العملية!",
+      "BATCH": {
+        "SELECTED_FOLDER_TITLE": "اختر مجلد:",
+        "DONE_TITLE": "تم!",
+        "OPEN_UPSCAYLED_FOLDER_TITLE": "افتح مجلد ابسكيل"
+      }
+    },
+    "SLIDER": {
+      "ORIGINAL_TITLE": "اصلي",
+      "UPSCAYLED_TITLE": "مُحَجم"
+    },
+    "DIALOG_BOX": {
+      "CLOSE": "أغلاق"
+    },
+    "BG_REMOVAL": {
+      "TITLE": "Background Removal",
+      "DESCRIPTION": "Automatically remove the background from your images before or after upscaling.",
+      "MODEL_TITLE": "Background Removal Model",
+      "MODEL_DESCRIPTION": "Select AI Model",
+      "REQUIRES_PYTHON": "Background removal requires Python with the 'rembg' package installed (pip install rembg onnxruntime). The model is downloaded on first use.",
+      "OPTIONS": {
+        "OFF": "Off",
+        "BEFORE": "Remove background before upscaling",
+        "AFTER": "Remove background after upscaling"
+      },
+      "MODELS": {
+        "u2netp": {
+          "NAME": "U2Net Portrait (Fast)",
+          "DESCRIPTION": "Lightweight and fast. Good balance of speed and quality for most subjects."
+        },
+        "u2net": {
+          "NAME": "U2Net",
+          "DESCRIPTION": "General purpose background removal with high quality results."
+        },
+        "isnet-general-use": {
+          "NAME": "ISNet General",
+          "DESCRIPTION": "High quality segmentation for general subjects, especially people."
+        },
+        "isnet-anime": {
+          "NAME": "ISNet Anime",
+          "DESCRIPTION": "Tuned for anime and illustration art."
+        },
+        "bria-rmbg-1.4": {
+          "NAME": "BRIA RMBG 1.4",
+          "DESCRIPTION": "Photorealistic background removal with excellent edge detail."
+        }
+      }
+    }
+  },
+  "ERRORS": {
+    "GPU_ERROR": {
+      "TITLE": "خطأ في وحدة معالجة الرسوم",
+      "DESCRIPTION": "حصل مشكلة في وحدة معالجة الرسوم اقراء التالي ({data})"
+    },
+    "COPY_ERROR": {
+      "TITLE": "خطأ في النسخ",
+      "DESCRIPTION": ""
+    },
+    "READ_WRITE_ERROR": {
+      "TITLE": "خطأ في القراءة و الكتابة",
+      "DESCRIPTION": "تأكد من ان المسار صحيح و أذونات القراءة و الكتابة معطاة \n({data})"
+    },
+    "TILE_SIZE_ERROR": {
+      "TITLE": "خطأ",
+      "DESCRIPTION": "حجم المنطقة خطأ غيره من الاعدادات او ضعه صفراً ({data})"
+    },
+    "EXCEPTION_ERROR": {
+      "TITLE": "خطأ استثتائي",
+      "DESCRIPTION": "ابسيكيل يواجه مشكلة, ابسكيل فشل في تنفيذ اوامر ثنائية بشكل صحيح, حاول قرائه السجلات قد تحصل على معلومات لحل المشكلة, توجه الى"
+    },
+    "GENERIC_ERROR": {
+      "TITLE": "خطأ"
+    },
+    "NO_OUTPUT_FOLDER_ERROR": {
+      "TITLE": "ضع مجلد الاخراج",
+      "DESCRIPTION": "يرجا اختيار مجلد اخراج"
+    },
+    "INVALID_IMAGE_ERROR": {
+      "TITLE": "صورة غير صالحة",
+      "DESCRIPTION": "يرجى اختيار صورة بهذه التنسيقات PNG, JPG, JPEG, JFIF or WEBP.",
+      "ADDITIONAL_DESCRIPTION": "اسحب و اسقط الصورة",
+      "CLIPBOARD_DESCRIPTION": "لا يوجد صورة في المحفظة للصقها"
+    },
+    "NO_IMAGE_ERROR": {
+      "TITLE": "ما من صورة محددة",
+      "DESCRIPTION": "اختر صورة لتحجيمها من فضلك"
+    },
+    "METADATA_ERROR": {
+      "TITLE": "خطأ في نسخ البيانات الوصفية",
+      "DESCRIPTION": "تعذر نسخ البيانات الوصفية من الصورة الأصلية إلى الصورة المُنشأة. ({data})"
+    }
+  },
+  "WARNING": {
+    "GENERIC_WARNING": {
+      "TITLE": "تحذير"
+    },
+    "METADATA_FORMAT": {
+      "TITLE": "تحذير البيانات الوصفية",
+      "DESCRIPTION": "في بعض الأنظمة، قد لا تكون البيانات الوصفية مرئية في التنسيقات غير JPG. استخدم أدوات خاصة لعرض البيانات الوصفية إذا لزم الأمر."
+    }
+  },
+  "UPSCAYL_CLOUD": {
+    "COMING_SOON": "قادم قريبا!",
+    "CATCHY_PHRASE_1": "لا مزيد من خطأ, مشاكل هاردوير, ولا مزيد من الانتظار لوقت طويل",
+    "CATCHY_PHRASE_2": "🌐 استعمل ابسكيل في اي مكان وزمان\n☁️ لا تحتاج الى وحدة معالجة رسومd\n👩 تحسين جودة الوجوه\n🦋 اكثر من 10 نماذج\n🏎 اسرع بـ5 مرات على تطبيق ابسكيل\n🎞 تحجيم الفيديوهات\n💰 للاستخدام التجاري\n😴 حُجًم خلال نومك",
+    "ALREADY_REGISTERED_ALERT": "شكرا لك {name}! يبدو ان بريدك مسجل بالفعل :D اذا كان مشكلة في هذا تواصل معنا",
+    "ADD_SUCCESS": "شكرا لانضمامك في قائمة الانتظار! سنرسل لك اشعارا حين توفر التخزين السحابية",
+    "INCORRECT_FIELDS_ALERT": "يرجا ملى جميع الحقول بشكل صحيح",
+    "JOIN_WAITLIST": "انظم لقائمة الانتظار",
+    "DONT_SHOW_AGAIN": "لا تعرض هذا مجددا"
+  },
+  "ONBOARDING_DIALOG": {
+    "NEXT_BUTTON_TITLE": "التالي",
+    "BACK_BUTTON_TITLE": "رجوع",
+    "GET_STARTED_BUTTON_TITLE": "أبداء",
+    "SETTINGS_NOTE": "يمكنك تغيير هذه الاعدادات في اي وقت",
+    "STEP_1": {
+      "TITLE": "مرحبا بك في ابسكيل🎉",
+      "DESCRIPTION": "لنبدأ بخطوات بسيطة"
+    },
+    "STEP_2": {
+      "TITLE": "اختر تخصيصاتك 🎨",
+      "DESCRIPTION": "اضبط اعداداتك."
+    },
+    "STEP_3": {
+      "TITLE": "انت جاهز! 🎉",
+      "DESCRIPTION": "انت مستعد لاستخدام ابسكيل!"
+    }
+  }
+}

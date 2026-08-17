@@ -1,0 +1,329 @@
+{
+  "TITLE": "Rescayl",
+  "INTRO": "Introducing Rescayl Cloud!",
+  "HEADER": {
+    "DESCRIPTION": "AI Image Upscaler"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "Copyright ©"
+  },
+  "SETTINGS": {
+    "TITLE": "Settings",
+    "CHANGE_LANGUAGE": {
+      "TITLE": "Change Language"
+    },
+    "IMAGE_COMPRESSION": {
+      "TITLE": "Image Compression",
+      "DESCRIPTION": "PNG compression is lossless, so it might not reduce the file size significantly and higher compression values might affect the performance. JPG and WebP compression is lossy."
+    },
+    "CUSTOM_MODELS": {
+      "TITLE": "ADD CUSTOM MODELS",
+      "BUTTON_FOLDER": "Select Folder",
+      "DESCRIPTION": "You can add your own models easily. For more details:"
+    },
+    "CUSTOM_INPUT_RESOLUTION": {
+      "TITLE": "CUSTOM OUTPUT WIDTH",
+      "RESTART": "REQUIRES RESTART",
+      "DESCRIPTION": "Use a custom width for the output images. The height will be adjusted automatically. Enabling this will override the scale setting."
+    },
+    "GPU_ID_INPUT": {
+      "TITLE": "GPU ID",
+      "DESCRIPTION": "Please read the Rescayl Documentation for more information.",
+      "ADDITIONAL_DESCRIPTION": "Enable performance mode on Windows for better results."
+    },
+    "IMAGE_FORMAT": {
+      "TITLE": "SAVE IMAGE AS",
+      "PNG": "PNG",
+      "JPG": "JPG",
+      "WEBP": "WEBP"
+    },
+    "COPY_METADATA": {
+      "TITLE": "COPY IMAGE METADATA",
+      "DESCRIPTION": "Keep original image metadata (EXIF) in the upscaled image.",
+      "SUGGEST_JPG_TITLE": "Recommended Format Change",
+      "SUGGEST_JPG_DESCRIPTION": "For better metadata compatibility across different systems, we recommend using JPG format. Would you like to change?",
+      "CHANGE_TO_JPG": "Change to JPG",
+      "KEEP_CURRENT_FORMAT": "Keep {format}"
+    },
+    "IMAGE_SCALE": {
+      "TITLE": "Image Scale",
+      "DESCRIPTION": "Anything above 4X (except 16X Double Rescayl) only resizes the image and does not use AI upscaling.",
+      "WARNING": "Anything above 5X may cause performance issues on some devices!",
+      "ADDITIONAL_WARNING": "This may cause performance issues on some devices!"
+    },
+    "LOG_AREA": {
+      "ON_COPY": "COPIED ✅",
+      "BUTTON_TITLE": "COPY LOGS 📋",
+      "NO_LOGS": "No logs to show"
+    },
+    "OVERWRITE_TOGGLE": {
+      "TITLE": "OVERWRITE PREVIOUS UPSCALE",
+      "DESCRIPTION": "If enabled, Rescayl will process the image again instead of loading it directly."
+    },
+    "RESET_SETTINGS": {
+      "BUTTON_TITLE": "RESET UPSCAYL",
+      "ALERT": "Rescayl has been reset. Please restart the app."
+    },
+    "SAVE_OUTPUT_FOLDER": {
+      "TITLE": "SAVE OUTPUT FOLDER",
+      "DESCRIPTION": "If enabled, the output folder will be remembered between sessions."
+    },
+    "AUTO_UPDATE": {
+      "TITLE": "AUTO UPDATE UPSCAYL",
+      "DESCRIPTION": "If enabled, the application will check for new updates and notify you."
+    },
+    "ENABLE_CONTRIBUTION": {
+      "TITLE": "HELP IMPROVE UPSCAYL",
+      "DESCRIPTION": "If enabled, Rescayl will collect anonymous usage data to improve the application interface and features."
+    },
+    "THEME": {
+      "TITLE": "UPSCAYL THEME"
+    },
+    "LANGUAGE": {
+      "TITLE": "UPSCAYL LANGUAGE"
+    },
+    "CUSTOM_TILE_SIZE": {
+      "TITLE": "CUSTOM TILE SIZE",
+      "DESCRIPTION": "Use a custom tile size for segmenting the image. This can help process images faster by reducing the number of tiles generated."
+    },
+    "TURN_OFF_NOTIFICATIONS": {
+      "TITLE": "TURN OFF NOTIFICATIONS",
+      "DESCRIPTION": "If enabled, Rescayl will not send any system notifications on success or failure."
+    },
+    "TTA_MODE": {
+      "TITLE": "TTA Mode",
+      "DESCRIPTION": "Enable Test Time Augmentation for better results, such as removing artifacts BUT this will increase the processing time by 8x!"
+    },
+    "SYSTEM_INFO": {
+      "TITLE": "System Info"
+    },
+    "PRESERVE_FILENAME": {
+      "TITLE": "PRESERVE ORIGINAL FILENAME",
+      "DESCRIPTION": "If enabled, the upscaled image keeps the original filename instead of appending the scale and model."
+    }
+  },
+  "APP": {
+    "TITLE": "Rescayl",
+    "BATCH_MODE": {
+      "TITLE": "Batch Rescayl",
+      "DESCRIPTION": "This will let you Rescayl all files in a folder at once"
+    },
+    "FILE_SELECTION": {
+      "TITLE": "Step 1",
+      "BATCH_MODE_TYPE": "Select Folder",
+      "SINGLE_MODE_TYPE": "Select Image"
+    },
+    "MODEL_SELECTION": {
+      "TITLE": "Step 2",
+      "DESCRIPTION": "Select AI Model",
+      "IMPORTED_CUSTOM_MODELS": "Imported Custom Models",
+      "BEFORE": "Before",
+      "AFTER": "After",
+      "ZOOM": "Zoom",
+      "MODELS": {
+        "upscayl-standard-4x": {
+          "NAME": "Rescayl Standard",
+          "DESCRIPTION": "General purpose 4x upscaling (32 MB). Best for photos and natural images. Balanced quality and speed. 4 GB+ VRAM recommended."
+        },
+        "upscayl-lite-4x": {
+          "NAME": "Rescayl Lite",
+          "DESCRIPTION": "Lightweight 4x upscaling (2.4 MB). Fastest model — ideal for quick previews or low-end GPUs. Works well on integrated GPU with 1 GB+ VRAM."
+        },
+        "remacri-4x": {
+          "NAME": "Remacri (Non-Commercial)",
+          "DESCRIPTION": "4x photo upscaler (32 MB) with enhanced sharpness and fine detail. Great for nature and portrait photography. 4 GB+ VRAM recommended. Non-commercial use only."
+        },
+        "ultramix-balanced-4x": {
+          "NAME": "Ultramix (Non-Commercial)",
+          "DESCRIPTION": "4x model (32 MB) balancing sharpness and natural detail. Ideal for mixed photo content where neither extreme sharpness nor heavy smoothing is desired. 4 GB+ VRAM recommended. Non-commercial use only."
+        },
+        "ultrasharp-4x": {
+          "NAME": "Ultrasharp (Non-Commercial)",
+          "DESCRIPTION": "4x model (32 MB) tuned for maximum sharpness and edge detail. Best for images where crisp detail matters most. 4 GB+ VRAM recommended. Non-commercial use only."
+        },
+        "digital-art-4x": {
+          "NAME": "Digital Art",
+          "DESCRIPTION": "4x upscaler (8.6 MB) designed for digital art, illustrations, and painted images. Preserves clean lines and flat colors. 2 GB+ VRAM recommended."
+        },
+        "realesr-animevideov3-x2": {
+          "NAME": "Anime Video (2x)",
+          "DESCRIPTION": "Fast 2x upscaler (1.2 MB) for anime, cartoons, and stylized video frames. Extremely lightweight — runs well on integrated GPU with 1 GB+ VRAM."
+        },
+        "realesr-animevideov3-x3": {
+          "NAME": "Anime Video (3x)",
+          "DESCRIPTION": "Fast 3x upscaler (1.2 MB) for anime, cartoons, and stylized video frames. Extremely lightweight — runs well on integrated GPU with 1 GB+ VRAM."
+        },
+        "realesr-animevideov3-x4": {
+          "NAME": "Anime Video (4x)",
+          "DESCRIPTION": "Fast 4x upscaler (1.2 MB) for anime, cartoons, and stylized video frames. Extremely lightweight — runs well on integrated GPU with 1 GB+ VRAM."
+        },
+        "high-fidelity-4x": {
+          "NAME": "High Fidelity",
+          "DESCRIPTION": "4x model (32 MB) focused on realistic detail preservation and smooth textures. Best all-around choice for photos, mixed content, and general use. 4 GB+ VRAM recommended."
+        }
+      }
+    },
+    "BG_REMOVAL": {
+      "TITLE": "BG Removal",
+      "DESCRIPTION": "Automatically remove the background from your images before or after upscaling.",
+      "MODEL_TITLE": "Background Removal Model",
+      "MODEL_DESCRIPTION": "Select AI Model",
+      "REQUIRES_PYTHON": "Uses an AI segmentation model bundled with Rescayl. No additional setup required.",
+      "OPTIONS": {
+        "OFF": "Off",
+        "BEFORE": "Before upscaling",
+        "AFTER": "After upscaling"
+      },
+      "MODELS": {
+        "isnet-general-use": {
+          "NAME": "ISNet General",
+          "DESCRIPTION": "High quality AI segmentation for general subjects, especially people. Bundled with Rescayl."
+        }
+      }
+    },
+    "DOUBLE_UPSCAYL": {
+      "TITLE": "Double Rescayl",
+      "DESCRIPTION": "Enable this option to run upscayl twice on an image. Note that this may cause a significant increase in processing time and possibly performance issues for scales greater than 4X."
+    },
+    "OUTPUT_PATH_SELECTION": {
+      "TITLE": "Step 3",
+      "MAC_APP_STORE_ALERT": "Due to MacOS App Store security restrictions, Rescayl requires you to select an output folder everytime you start it.\n\nTo avoid this, you can permanently save a default output folder in the Rescayl 'Settings' tab.",
+      "NOT_SELECTED": "Not Selected",
+      "DEFAULT_IMG_PATH": "Defaults to Image's path",
+      "DEFAULT_FOLDER_PATH": "Defaults to  Folder's path",
+      "BUTTON_TITLE": "Set Output Folder"
+    },
+    "SCALE_SELECTION": {
+      "TITLE": "Step 4",
+      "FROM_TITLE": "Rescayl from ",
+      "TO_TITLE": " to ",
+      "NO_OUTPUT_FOLDER_ALERT": "Please select an output folder first",
+      "START_BUTTON_TITLE": "Rescayl 🚀",
+      "IN_PROGRESS_BUTTON_TITLE": "Rescayling ⏳"
+    },
+    "MORE_OPTIONS_DRAWER": {
+      "RESET_BUTTON_TITLE": "Reset Image",
+      "LENS_VIEW_TITLE": "Lens View",
+      "SLIDER_VIEW_TITLE": "Slider View",
+      "ZOOM_AMOUNT_TITLE": "Zoom Amount",
+      "TOTAL_UPSCAYLS": "Total Rescayls",
+      "TOTAL_BATCH_UPSCAYLS": "Total Batch Rescayls",
+      "TOTAL_IMAGE_UPSCAYLS": "Total Image Rescayls",
+      "TOTAL_DOUBLE_UPSCAYLS": "Total Double Rescayls",
+      "AVERAGE_UPSCAYL_TIME": "Average Rescayl Time",
+      "LAST_UPSCAYL_DURATION": "Last Rescayl Duration",
+      "LAST_USED_AT": "Last Used At"
+    },
+    "PROGRESS_BAR": {
+      "BATCH_UPSCAYL_IN_PROGRESS_TITLE": "Batch Rescayl In Progress:",
+      "IN_PROGRESS_TITLE": "Doing the Rescayl magic...",
+      "STOP_BUTTON_TITLE": "STOP"
+    },
+    "RESET_BUTTON_TITLE": "Reset",
+    "RIGHT_PANE_INFO": {
+      "SELECT_FOLDER": "Select a Folder",
+      "SELECT_IMAGE": "Select an Image",
+      "SELECT_FOLDER_DESCRIPTION": "Make sure that the folder doesn't contain anything except PNG, JPG, JPEG & WEBP images.",
+      "SELECT_IMAGES_DESCRIPTION": "Select or drag and drop a PNG, JPG, JPEG or WEBP image.",
+      "PASTE_IMAGE_DESCRIPTION": "Hit Ctrl+V or ⌘+V to Paste image from Clipboard"
+    },
+    "PROGRESS": {
+      "PROCESSING_TITLE": "Processing the image...",
+      "SCALING_CONVERTING_TITLE": "Scaling and converting image...",
+      "WAIT_TITLE": "Hold on...",
+      "SUCCESS_TITLE": "Rescayl Successful!",
+      "BATCH": {
+        "SELECTED_FOLDER_TITLE": "Selected folder:",
+        "DONE_TITLE": "All done!",
+        "OPEN_UPSCAYLED_FOLDER_TITLE": "Open Rescayled Folder"
+      }
+    },
+    "SLIDER": {
+      "ORIGINAL_TITLE": "Original",
+      "UPSCAYLED_TITLE": "Rescayled"
+    },
+    "DIALOG_BOX": {
+      "CLOSE": "Close"
+    }
+  },
+  "ERRORS": {
+    "GPU_ERROR": {
+      "TITLE": "GPU Error",
+      "DESCRIPTION": "Ran into an issue with the GPU. Please read the docs for troubleshooting! ({data})"
+    },
+    "COPY_ERROR": {
+      "TITLE": "Copy Error",
+      "DESCRIPTION": ""
+    },
+    "READ_WRITE_ERROR": {
+      "TITLE": "Read/Write Error",
+      "DESCRIPTION": "Make sure that the path is correct and you have proper read/write permissions \n({data})"
+    },
+    "TILE_SIZE_ERROR": {
+      "TITLE": "Error",
+      "DESCRIPTION": "The tile size is wrong. Please change the tile size in the settings or set to 0 ({data})"
+    },
+    "EXCEPTION_ERROR": {
+      "TITLE": "Exception Error",
+      "DESCRIPTION": "Rescayl encountered an error. Possibly, the upscayl binary failed to execute the commands properly. Try checking the logs to see if you get any information."
+    },
+    "GENERIC_ERROR": {
+      "TITLE": "Error"
+    },
+    "NO_OUTPUT_FOLDER_ERROR": {
+      "TITLE": "Set Output Folder",
+      "DESCRIPTION": "Please select an output folder first"
+    },
+    "INVALID_IMAGE_ERROR": {
+      "TITLE": "Invalid Image",
+      "DESCRIPTION": "Please select/paste an image with a valid extension like PNG, JPG, JPEG, JFIF or WEBP.",
+      "ADDITIONAL_DESCRIPTION": "Please drag and drop an image",
+      "CLIPBOARD_DESCRIPTION": "No Image file found in Clipboard to paste!"
+    },
+    "NO_IMAGE_ERROR": {
+      "TITLE": "No image selected",
+      "DESCRIPTION": "Please select an image to upscale"
+    },
+    "METADATA_ERROR": {
+      "TITLE": "Metadata Copy Error",
+      "DESCRIPTION": "Could not copy metadata from the original image to the generated image. ({data})"
+    }
+  },
+  "WARNING": {
+    "GENERIC_WARNING": {
+      "TITLE": "Warning"
+    },
+    "METADATA_FORMAT": {
+      "TITLE": "Metadata Warning",
+      "DESCRIPTION": "On some systems, metadata may not be visible in formats other than JPG. Use specific tools to view metadata if needed."
+    }
+  },
+  "UPSCAYL_CLOUD": {
+    "COMING_SOON": "Coming soon!",
+    "CATCHY_PHRASE_1": "No more errors, hardware issues, quality compromises or long loading times!",
+    "CATCHY_PHRASE_2": "🌐 Rescayl anywhere, anytime, any device\n☁️ No Graphics Card or hardware required\n👩 Face Enhancement\n🦋 10+ models to choose from\n🏎 5x faster than Rescayl Desktop\n🎞 Video Upscaling\n💰 Commercial Usage\n😴 Rescayl while you sleep",
+    "ALREADY_REGISTERED_ALERT": "Thank you {name}! It seems that your email has already been registered :D If that's not the case, please try again.",
+    "ADD_SUCCESS": "Thank you for joining the waitlist! We will notify you when Rescayl Cloud is ready for you.",
+    "INCORRECT_FIELDS_ALERT": "Please fill in all the fields correctly.",
+    "JOIN_WAITLIST": "Join the waitlist",
+    "DONT_SHOW_AGAIN": "DON'T SHOW AGAIN"
+  },
+  "ONBOARDING_DIALOG": {
+    "NEXT_BUTTON_TITLE": "Next",
+    "BACK_BUTTON_TITLE": "Back",
+    "GET_STARTED_BUTTON_TITLE": "Get Started",
+    "SETTINGS_NOTE": "You can always change these settings later.",
+    "STEP_1": {
+      "TITLE": "Welcome to Rescayl 🎉",
+      "DESCRIPTION": "Let's get you started with a few quick steps."
+    },
+    "STEP_2": {
+      "TITLE": "Choose Your Preferences 🎨",
+      "DESCRIPTION": "Configure your initial settings."
+    },
+    "STEP_3": {
+      "TITLE": "You're All Set! 🎉",
+      "DESCRIPTION": "You're ready to start upscaling images with Rescayl!"
+    }
+  }
+}

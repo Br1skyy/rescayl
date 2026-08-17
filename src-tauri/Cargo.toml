@@ -1,0 +1,36 @@
+[package]
+name = "rescayl"
+version = "0.1.0"
+description = "Rescayl - Free and Open Source AI Image Upscaler"
+authors = ["Rescayl Contributors"]
+edition = "2021"
+
+[lib]
+name = "rescayl_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["protocol-asset"] }
+tauri-plugin-dialog = "2"
+tauri-plugin-notification = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sysinfo = "0.30"
+opener = "0.7"
+base64 = "0.22"
+percent-encoding = "2"
+image = { version = "0.25", default-features = false, features = ["jpeg", "png", "webp"] }
+ort = { version = "=2.0.0-rc.13", default-features = true, features = ["download-binaries", "ndarray"] }
+ndarray = "0.17"
+
+# Local HTTP API for scripting
+axum = "0.8"
+tokio = { version = "1", features = ["full"] }
+tower-http = { version = "0.6", features = ["cors"] }
+
+# Marketplace downloads / remote manifest
+reqwest = { version = "0.13", features = ["json", "stream"] }
+futures-util = "0.3"

@@ -1,0 +1,345 @@
+{
+  "TITLE": "Rescayl",
+  "INTRO": "Представляємо Rescayl Cloud!",
+  "HEADER": {
+    "DESCRIPTION": "Збільшення зображень з ШІ"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "Всі права захищено ©"
+  },
+  "SETTINGS": {
+    "TITLE": "Налаштування",
+    "CHANGE_LANGUAGE": {
+      "TITLE": "Змінити мову"
+    },
+    "IMAGE_COMPRESSION": {
+      "TITLE": "Стиснення зображень",
+      "DESCRIPTION": "Стиснення PNG є безвтратним, тому воно може не значно зменшити розмір файлу, а вищі значення стиснення можуть вплинути на продуктивність. Стиснення JPG та WebP є втратним."
+    },
+    "CUSTOM_MODELS": {
+      "TITLE": "ДОДАТИ ВЛАСНІ МОДЕЛІ",
+      "BUTTON_FOLDER": "Обрати теку",
+      "DESCRIPTION": "Ви можете легко додати власні моделі. Для детальнішої інформації:"
+    },
+    "CUSTOM_INPUT_RESOLUTION": {
+      "TITLE": "ВЛАСНА ШИРИНА ВИВОДУ",
+      "RESTART": "ПОТРЕБУЄ ПЕРЕЗАПУСКУ",
+      "DESCRIPTION": "Використовувати власну ширину для вихідних зображень. Висота буде налаштована автоматично. Увімкнення цієї опції перевизначить налаштування масштабу."
+    },
+    "GPU_ID_INPUT": {
+      "TITLE": "ID відеокарти",
+      "DESCRIPTION": "Будь ласка, прочитайте документацію Rescayl для додаткової інформації.",
+      "ADDITIONAL_DESCRIPTION": "Увімкніть режим продуктивності у Windows для кращих результатів."
+    },
+    "IMAGE_FORMAT": {
+      "TITLE": "ЗБЕРЕГТИ ЗОБРАЖЕННЯ ЯК",
+      "PNG": "PNG",
+      "JPG": "JPG",
+      "WEBP": "WEBP"
+    },
+    "COPY_METADATA": {
+      "TITLE": "КОПІЮВАТИ МЕТАДАНІ ЗОБРАЖЕННЯ",
+      "DESCRIPTION": "Зберігати оригінальні метадані зображення (EXIF) у покращеному зображенні.",
+      "SUGGEST_JPG_TITLE": "Рекомендована зміна формату",
+      "SUGGEST_JPG_DESCRIPTION": "Для кращої сумісності метаданих між різними системами ми рекомендуємо використовувати формат JPG. Бажаєте змінити?",
+      "CHANGE_TO_JPG": "Змінити на JPG",
+      "KEEP_CURRENT_FORMAT": "Зберегти {format}"
+    },
+    "IMAGE_SCALE": {
+      "TITLE": "Масштаб зображення",
+      "DESCRIPTION": "Будь-що вище 4X (окрім 16X подвійного збільшення) лише змінює розмір зображення без використання ШІ.",
+      "WARNING": "Масштаб вище 5X може спричинити проблеми з продуктивністю на деяких пристроях!",
+      "ADDITIONAL_WARNING": "Це може спричинити проблеми з продуктивністю на деяких пристроях!"
+    },
+    "LOG_AREA": {
+      "ON_COPY": "СКОПІЙОВАНО ✅",
+      "BUTTON_TITLE": "КОПІЮВАТИ ЛОГИ 📋",
+      "NO_LOGS": "Немає логів для відображення"
+    },
+    "OVERWRITE_TOGGLE": {
+      "TITLE": "ПЕРЕЗАПИСУВАТИ ПОПЕРЕДНЄ ЗБІЛЬШЕННЯ",
+      "DESCRIPTION": "Якщо увімкнено, Rescayl буде обробляти зображення знову замість прямого завантаження."
+    },
+    "RESET_SETTINGS": {
+      "BUTTON_TITLE": "СКИНУТИ НАЛАШТУВАННЯ",
+      "ALERT": "Налаштування скинуто. Будь ласка, перезапустіть додаток."
+    },
+    "SAVE_OUTPUT_FOLDER": {
+      "TITLE": "ЗБЕРІГАТИ ТЕКУ ВИВОДУ",
+      "DESCRIPTION": "Якщо увімкнено, тека виводу буде запам'ятовуватися між сесіями."
+    },
+    "AUTO_UPDATE": {
+      "TITLE": "АВТООНОВЛЕННЯ UPSCAYL",
+      "DESCRIPTION": "Якщо увімкнено, додаток перевірятиме наявність оновлень та сповіщатиме вас."
+    },
+    "ENABLE_CONTRIBUTION": {
+      "TITLE": "ДОПОМОГТИ ПОКРАЩИТИ UPSCAYL",
+      "DESCRIPTION": "Якщо увімкнено, Rescayl збиратиме анонімні дані використання для покращення інтерфейсу та функцій додатку."
+    },
+    "THEME": {
+      "TITLE": "ТЕМА UPSCAYL"
+    },
+    "LANGUAGE": {
+      "TITLE": "МОВА UPSCAYL"
+    },
+    "CUSTOM_TILE_SIZE": {
+      "TITLE": "ВЛАСНИЙ РОЗМІР ТАЙЛУ",
+      "DESCRIPTION": "Використовувати власний розмір тайлу для сегментації зображення. Це може допомогти швидше обробляти зображення, зменшуючи кількість створених тайлів."
+    },
+    "TURN_OFF_NOTIFICATIONS": {
+      "TITLE": "ВИМКНУТИ СПОВІЩЕННЯ",
+      "DESCRIPTION": "Якщо увімкнено, Rescayl не надсилатиме системні сповіщення про успіх чи помилки."
+    },
+    "TTA_MODE": {
+      "TITLE": "Режим TTA",
+      "DESCRIPTION": "Увімкнути Test Time Augmentation для кращих результатів, наприклад, видалення артефактів, АЛЕ це збільшить час обробки у 8 разів!"
+    },
+    "SYSTEM_INFO": {
+      "TITLE": "Системна інформація"
+    },
+    "PRESERVE_FILENAME": {
+      "TITLE": "PRESERVE ORIGINAL FILENAME",
+      "DESCRIPTION": "If enabled, the upscaled image keeps the original filename instead of appending the scale and model."
+    }
+  },
+  "APP": {
+    "TITLE": "Rescayl",
+    "BATCH_MODE": {
+      "TITLE": "Пакетний Rescayl",
+      "DESCRIPTION": "Це дозволить вам обробити всі файли в теці одночасно"
+    },
+    "FILE_SELECTION": {
+      "TITLE": "Крок 1",
+      "BATCH_MODE_TYPE": "Обрати теку",
+      "SINGLE_MODE_TYPE": "Обрати зображення"
+    },
+    "MODEL_SELECTION": {
+      "TITLE": "Крок 2",
+      "DESCRIPTION": "Оберіть ШІ модель",
+      "IMPORTED_CUSTOM_MODELS": "Імпортовані власні моделі",
+      "BEFORE": "До",
+      "AFTER": "Після",
+      "ZOOM": "Масштаб",
+      "MODELS": {
+        "upscayl-standard-4x": {
+          "NAME": "Rescayl Стандартний",
+          "DESCRIPTION": "Підходить для більшості зображень."
+        },
+        "upscayl-lite-4x": {
+          "NAME": "Rescayl Легкий",
+          "DESCRIPTION": "Підходить для більшості зображень. Швидке збільшення з мінімальною втратою якості."
+        },
+        "remacri-4x": {
+          "NAME": "Remacri (Некомерційний)",
+          "DESCRIPTION": "Для природних зображень. Додає різкість та деталізацію. Без комерційного використання."
+        },
+        "ultramix-balanced-4x": {
+          "NAME": "Ultramix (Некомерційний)",
+          "DESCRIPTION": "Для природних зображень з балансом різкості та деталізації."
+        },
+        "ultrasharp-4x": {
+          "NAME": "Ultrasharp (Некомерційний)",
+          "DESCRIPTION": "Для природних зображень з акцентом на різкості."
+        },
+        "digital-art-4x": {
+          "NAME": "Цифрове мистецтво",
+          "DESCRIPTION": "Для цифрового мистецтва та ілюстрацій."
+        },
+        "high-fidelity-4x": {
+          "NAME": "Висока точність",
+          "DESCRIPTION": "Для всіх видів зображень з акцентом на реалістичних деталях та плавних текстурах."
+        },
+        "realesr-animevideov3-x2": {
+          "NAME": "Anime Video (2x)",
+          "DESCRIPTION": "For anime and stylized content. Fast 2x upscaling with good quality."
+        },
+        "realesr-animevideov3-x3": {
+          "NAME": "Anime Video (3x)",
+          "DESCRIPTION": "For anime and stylized content. 3x upscaling with balanced quality."
+        },
+        "realesr-animevideov3-x4": {
+          "NAME": "Anime Video (4x)",
+          "DESCRIPTION": "For anime and stylized content. 4x upscaling for maximum detail."
+        }
+      }
+    },
+    "DOUBLE_UPSCAYL": {
+      "TITLE": "Подвійний Rescayl",
+      "DESCRIPTION": "Увімкніть цю опцію для подвійної обробки зображення. Зауважте, що це може значно збільшити час обробки та можливі проблеми з продуктивністю для масштабів більше 4X."
+    },
+    "OUTPUT_PATH_SELECTION": {
+      "TITLE": "Крок 3",
+      "MAC_APP_STORE_ALERT": "Через обмеження безпеки MacOS App Store, Rescayl вимагає вибору теки виводу щоразу при запуску.\n\nЩоб уникнути цього, ви можете зберегти теку виводу за замовчуванням у вкладці 'Налаштування' Rescayl.",
+      "NOT_SELECTED": "Не обрано",
+      "DEFAULT_IMG_PATH": "За замовчуванням - шлях до зображення",
+      "DEFAULT_FOLDER_PATH": "За замовчуванням - шлях до теки",
+      "BUTTON_TITLE": "Обрати теку виводу"
+    },
+    "SCALE_SELECTION": {
+      "TITLE": "Крок 4",
+      "FROM_TITLE": "Збільшити з ",
+      "TO_TITLE": " до ",
+      "NO_OUTPUT_FOLDER_ALERT": "Будь ласка, спочатку оберіть теку виводу",
+      "START_BUTTON_TITLE": "Апскейлити 🚀",
+      "IN_PROGRESS_BUTTON_TITLE": "Обробка ⏳"
+    },
+    "MORE_OPTIONS_DRAWER": {
+      "RESET_BUTTON_TITLE": "Скинути зображення",
+      "LENS_VIEW_TITLE": "Режим лупи",
+      "SLIDER_VIEW_TITLE": "Режим слайдера",
+      "ZOOM_AMOUNT_TITLE": "Рівень масштабу",
+      "TOTAL_UPSCAYLS": "Всього оброблено",
+      "TOTAL_BATCH_UPSCAYLS": "Всього пакетних обробок",
+      "TOTAL_IMAGE_UPSCAYLS": "Всього оброблених зображень",
+      "TOTAL_DOUBLE_UPSCAYLS": "Всього подвійних обробок",
+      "AVERAGE_UPSCAYL_TIME": "Середній час обробки",
+      "LAST_UPSCAYL_DURATION": "Тривалість останньої обробки",
+      "LAST_USED_AT": "Останнє використання"
+    },
+    "PROGRESS_BAR": {
+      "BATCH_UPSCAYL_IN_PROGRESS_TITLE": "Виконується пакетна обробка:",
+      "IN_PROGRESS_TITLE": "Виконуємо магію Rescayl...",
+      "STOP_BUTTON_TITLE": "СТОП"
+    },
+    "RESET_BUTTON_TITLE": "Скинути",
+    "RIGHT_PANE_INFO": {
+      "SELECT_FOLDER": "Оберіть теку",
+      "SELECT_IMAGE": "Оберіть зображення",
+      "SELECT_FOLDER_DESCRIPTION": "Переконайтеся, що тека містить лише зображення PNG, JPG, JPEG та WEBP.",
+      "SELECT_IMAGES_DESCRIPTION": "Оберіть або перетягніть зображення PNG, JPG, JPEG чи WEBP.",
+      "PASTE_IMAGE_DESCRIPTION": "Натисніть Ctrl+V або ⌘+V для вставки зображення з буфера обміну"
+    },
+    "PROGRESS": {
+      "PROCESSING_TITLE": "Обробка зображення...",
+      "SCALING_CONVERTING_TITLE": "Масштабування та конвертація зображення...",
+      "WAIT_TITLE": "Зачекайте...",
+      "SUCCESS_TITLE": "Обробку успішно завершено!",
+      "BATCH": {
+        "SELECTED_FOLDER_TITLE": "Обрана тека:",
+        "DONE_TITLE": "Все готово!",
+        "OPEN_UPSCAYLED_FOLDER_TITLE": "Відкрити теку з результатами"
+      }
+    },
+    "SLIDER": {
+      "ORIGINAL_TITLE": "Оригінал",
+      "UPSCAYLED_TITLE": "Оброблене"
+    },
+    "DIALOG_BOX": {
+      "CLOSE": "Закрити"
+    },
+    "BG_REMOVAL": {
+      "TITLE": "Background Removal",
+      "DESCRIPTION": "Automatically remove the background from your images before or after upscaling.",
+      "MODEL_TITLE": "Background Removal Model",
+      "MODEL_DESCRIPTION": "Select AI Model",
+      "REQUIRES_PYTHON": "Background removal requires Python with the 'rembg' package installed (pip install rembg onnxruntime). The model is downloaded on first use.",
+      "OPTIONS": {
+        "OFF": "Off",
+        "BEFORE": "Remove background before upscaling",
+        "AFTER": "Remove background after upscaling"
+      },
+      "MODELS": {
+        "u2netp": {
+          "NAME": "U2Net Portrait (Fast)",
+          "DESCRIPTION": "Lightweight and fast. Good balance of speed and quality for most subjects."
+        },
+        "u2net": {
+          "NAME": "U2Net",
+          "DESCRIPTION": "General purpose background removal with high quality results."
+        },
+        "isnet-general-use": {
+          "NAME": "ISNet General",
+          "DESCRIPTION": "High quality segmentation for general subjects, especially people."
+        },
+        "isnet-anime": {
+          "NAME": "ISNet Anime",
+          "DESCRIPTION": "Tuned for anime and illustration art."
+        },
+        "bria-rmbg-1.4": {
+          "NAME": "BRIA RMBG 1.4",
+          "DESCRIPTION": "Photorealistic background removal with excellent edge detail."
+        }
+      }
+    }
+  },
+  "ERRORS": {
+    "GPU_ERROR": {
+      "TITLE": "Помилка відеокарти",
+      "DESCRIPTION": "Виникла проблема з відеокартою. Будь ласка, прочитайте документацію для вирішення проблеми! ({data})"
+    },
+    "COPY_ERROR": {
+      "TITLE": "Помилка копіювання",
+      "DESCRIPTION": ""
+    },
+    "READ_WRITE_ERROR": {
+      "TITLE": "Помилка читання/запису",
+      "DESCRIPTION": "Переконайтеся, що шлях правильний і у вас є відповідні права доступу \n({data})"
+    },
+    "TILE_SIZE_ERROR": {
+      "TITLE": "Помилка",
+      "DESCRIPTION": "Неправильний розмір тайлу. Будь ласка, змініть розмір тайлу в налаштуваннях або встановіть 0 ({data})"
+    },
+    "EXCEPTION_ERROR": {
+      "TITLE": "Помилка виконання",
+      "DESCRIPTION": "Rescayl зіткнувся з помилкою. Можливо, виконуваний файл не зміг правильно виконати команди. Спробуйте перевірити логи для отримання додаткової інформації."
+    },
+    "GENERIC_ERROR": {
+      "TITLE": "Помилка"
+    },
+    "NO_OUTPUT_FOLDER_ERROR": {
+      "TITLE": "Оберіть теку виводу",
+      "DESCRIPTION": "Будь ласка, спочатку оберіть теку виводу"
+    },
+    "INVALID_IMAGE_ERROR": {
+      "TITLE": "Некоректне зображення",
+      "DESCRIPTION": "Будь ласка, оберіть/вставте зображення з допустимим розширенням, як-от PNG, JPG, JPEG, JFIF або WEBP.",
+      "ADDITIONAL_DESCRIPTION": "Будь ласка, перетягніть зображення",
+      "CLIPBOARD_DESCRIPTION": "У буфері обміну не знайдено зображення для вставки!"
+    },
+    "NO_IMAGE_ERROR": {
+      "TITLE": "Зображення не обрано",
+      "DESCRIPTION": "Будь ласка, оберіть зображення для обробки"
+    },
+    "METADATA_ERROR": {
+      "TITLE": "Помилка копіювання метаданих",
+      "DESCRIPTION": "Не вдалося скопіювати метадані з вихідного зображення до створеного зображення. ({data})"
+    }
+  },
+  "WARNING": {
+    "GENERIC_WARNING": {
+      "TITLE": "Попередження"
+    },
+    "METADATA_FORMAT": {
+      "TITLE": "Попередження про метадані",
+      "DESCRIPTION": "На деяких системах метадані можуть не відображатися в форматах, відмінних від JPG. За потреби використовуйте спеціальні інструменти для перегляду метаданих."
+    }
+  },
+  "UPSCAYL_CLOUD": {
+    "COMING_SOON": "Скоро!",
+    "CATCHY_PHRASE_1": "Більше жодних помилок, проблем з обладнанням, компромісів з якістю чи довгого очікування!",
+    "CATCHY_PHRASE_2": "🌐 Rescayl будь-де, будь-коли, на будь-якому пристрої\n☁️ Не потрібна відеокарта чи потужне обладнання\n👩 Покращення облич\n🦋 Понад 10 моделей на вибір\n🏎 У 5 разів швидше за десктопну версію\n🎞 Обробка відео\n💰 Комерційне використання\n😴 Обробка під час вашого сну",
+    "ALREADY_REGISTERED_ALERT": "Дякуємо, {name}! Схоже, ваша електронна пошта вже зареєстрована :D Якщо це не так, будь ласка, спробуйте ще раз.",
+    "ADD_SUCCESS": "Дякуємо за приєднання до списку очікування! Ми повідомимо вас, коли Rescayl Cloud буде готовий.",
+    "INCORRECT_FIELDS_ALERT": "Будь ласка, заповніть всі поля правильно.",
+    "JOIN_WAITLIST": "Приєднатися до списку очікування",
+    "DONT_SHOW_AGAIN": "БІЛЬШЕ НЕ ПОКАЗУВАТИ"
+  },
+  "ONBOARDING_DIALOG": {
+    "NEXT_BUTTON_TITLE": "Далі",
+    "BACK_BUTTON_TITLE": "Назад",
+    "GET_STARTED_BUTTON_TITLE": "Почати",
+    "SETTINGS_NOTE": "Ви завжди можете змінити ці налаштування пізніше.",
+    "STEP_1": {
+      "TITLE": "Ласкаво просимо до Rescayl 🎉",
+      "DESCRIPTION": "Давайте налаштуємо все за кілька швидких кроків."
+    },
+    "STEP_2": {
+      "TITLE": "Оберіть ваші налаштування 🎨",
+      "DESCRIPTION": "Налаштуйте початкові параметри."
+    },
+    "STEP_3": {
+      "TITLE": "Все готово! 🎉",
+      "DESCRIPTION": "Ви готові почати покращувати зображення з Rescayl!"
+    }
+  }
+}

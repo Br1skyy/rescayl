@@ -1,0 +1,345 @@
+{
+  "TITLE": "Rescayl",
+  "INTRO": "Представляем Rescayl Cloud!",
+  "HEADER": {
+    "DESCRIPTION": "ИИ-увеличитель изображений"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "Авторское право ©"
+  },
+  "SETTINGS": {
+    "TITLE": "Настройки",
+    "CHANGE_LANGUAGE": {
+      "TITLE": "Сменить язык"
+    },
+    "IMAGE_COMPRESSION": {
+      "TITLE": "Сжатие изображения",
+      "DESCRIPTION": "Сжатие PNG происходит без потерь, поэтому размер файла может уменьшиться незначительно, а более высокие значения сжатия могут повлиять на производительность. Сжатие JPG и WebP совершается с потерями."
+    },
+    "CUSTOM_MODELS": {
+      "TITLE": "ДОБАВИТЬ ПОЛЬЗОВАТЕЛЬСКИЕ МОДЕЛИ",
+      "BUTTON_FOLDER": "Выбрать папку",
+      "DESCRIPTION": "Вы можете легко добавить свои модели. Подробности в:"
+    },
+    "CUSTOM_INPUT_RESOLUTION": {
+      "TITLE": "ПОЛЬЗОВАТЕЛЬСКАЯ ШИРИНА ВЫХОДА",
+      "RESTART": "ТРЕБУЕТСЯ ПЕРЕЗАПУСК",
+      "DESCRIPTION": "Используйте пользовательскую ширину для вывода изображений. Высота настроится автоматически. Включение этой функции заменит настройку масштаба."
+    },
+    "GPU_ID_INPUT": {
+      "TITLE": "ИДЕНТИФИКАТОР ГП",
+      "DESCRIPTION": "Пожалуйста, прочитайте документацию Rescayl для получения дополнительной информации.",
+      "ADDITIONAL_DESCRIPTION": "Включите режим производительности на Windows для лучших результатов."
+    },
+    "IMAGE_FORMAT": {
+      "TITLE": "СОХРАНИТЬ ИЗОБРАЖЕНИЕ КАК",
+      "PNG": "PNG",
+      "JPG": "JPG",
+      "WEBP": "WEBP"
+    },
+    "COPY_METADATA": {
+      "TITLE": "КОПИРОВАТЬ МЕТАДАННЫЕ ИЗОБРАЖЕНИЯ",
+      "DESCRIPTION": "Сохранить исходные метаданные изображения (EXIF) в улучшенном изображении.",
+      "SUGGEST_JPG_TITLE": "Рекомендуемое изменение формата",
+      "SUGGEST_JPG_DESCRIPTION": "Для лучшей совместимости метаданных в разных системах мы рекомендуем использовать формат JPG. Хотите изменить?",
+      "CHANGE_TO_JPG": "Изменить на JPG",
+      "KEEP_CURRENT_FORMAT": "Оставить {format}"
+    },
+    "IMAGE_SCALE": {
+      "TITLE": "Масштаб изображения",
+      "DESCRIPTION": "Любое значение выше 4X (кроме двойного увеличения 16X) только изменяет размер изображения и не использует ИИ-увеличение.",
+      "WARNING": "Любое значение выше 5X может вызвать проблемы с производительностью на некоторых устройствах!",
+      "ADDITIONAL_WARNING": "Это может вызвать проблемы с производительностью на некоторых устройствах!"
+    },
+    "LOG_AREA": {
+      "ON_COPY": "СКОПИРОВАНО ✅",
+      "BUTTON_TITLE": "СКОПИРОВАТЬ ЖУРНАЛЫ 📋",
+      "NO_LOGS": "Нет журналов для отображения"
+    },
+    "OVERWRITE_TOGGLE": {
+      "TITLE": "ПЕРЕЗАПИСЬ ПРЕДЫДУЩЕГО УВЕЛИЧЕНИЯ",
+      "DESCRIPTION": "Если включено, Rescayl повторно обработает изображение вместо того, чтобы загружать его напрямую."
+    },
+    "RESET_SETTINGS": {
+      "BUTTON_TITLE": "СБРОСИТЬ UPSCAYL",
+      "ALERT": "Rescayl был сброшен. Пожалуйста, перезапустите приложение."
+    },
+    "SAVE_OUTPUT_FOLDER": {
+      "TITLE": "СОХРАНИТЬ ПАПКУ ВЫВОДА",
+      "DESCRIPTION": "Если включено, папка вывода будет запоминаться между сеансами."
+    },
+    "AUTO_UPDATE": {
+      "TITLE": "АВТОМАТИЧЕСКОЕ ОБНОВЛЕНИЕ UPSCAYL",
+      "DESCRIPTION": "Если включено, приложение будет проверять наличие новых обновлений и уведомлять вас."
+    },
+    "ENABLE_CONTRIBUTION": {
+      "TITLE": "ПОМОЧЬ УЛУЧШЕНИЮ UPSCAYL",
+      "DESCRIPTION": "Если включено, Rescayl будет собирать анонимные данные об использовании для улучшения интерфейса и функций приложения."
+    },
+    "THEME": {
+      "TITLE": "ТЕМА UPSCAYL"
+    },
+    "LANGUAGE": {
+      "TITLE": "ЯЗЫК UPSCAYL"
+    },
+    "CUSTOM_TILE_SIZE": {
+      "TITLE": "ПОЛЬЗОВАТЕЛЬСКИЙ РАЗМЕР ПЛИТКИ",
+      "DESCRIPTION": "Используйте пользовательский размер плитки для сегментации изображения. Это может помочь ускорить обработку изображений за счёт уменьшения количества генерируемых плиток."
+    },
+    "TURN_OFF_NOTIFICATIONS": {
+      "TITLE": "ОТКЛЮЧИТЬ УВЕДОМЛЕНИЯ",
+      "DESCRIPTION": "Если включено, Rescayl не будет отправлять системные уведомления о завершении или ошибках."
+    },
+    "TTA_MODE": {
+      "TITLE": "Режим TTA",
+      "DESCRIPTION": "Включите тестовое временное увеличение для получения лучших результатов, таких как удаление артефактов, НО это увеличит время обработки в 8 раз!"
+    },
+    "SYSTEM_INFO": {
+      "TITLE": "Системная информация"
+    },
+    "PRESERVE_FILENAME": {
+      "TITLE": "PRESERVE ORIGINAL FILENAME",
+      "DESCRIPTION": "If enabled, the upscaled image keeps the original filename instead of appending the scale and model."
+    }
+  },
+  "APP": {
+    "TITLE": "Rescayl",
+    "BATCH_MODE": {
+      "TITLE": "Пакетное увеличение",
+      "DESCRIPTION": "Позволяет увеличивать все файлы в папке сразу"
+    },
+    "FILE_SELECTION": {
+      "TITLE": "Шаг 1",
+      "BATCH_MODE_TYPE": "Выбрать папку",
+      "SINGLE_MODE_TYPE": "Выбрать изображение"
+    },
+    "MODEL_SELECTION": {
+      "TITLE": "Шаг 2",
+      "DESCRIPTION": "Выберите модель ИИ",
+      "IMPORTED_CUSTOM_MODELS": "Импортированные пользовательские модели",
+      "BEFORE": "До",
+      "AFTER": "После",
+      "ZOOM": "Увеличение",
+      "MODELS": {
+        "upscayl-standard-4x": {
+          "NAME": "Rescayl обычный",
+          "DESCRIPTION": "Подходит для большинства изображений."
+        },
+        "upscayl-lite-4x": {
+          "NAME": "Rescayl лёгкий",
+          "DESCRIPTION": "Подходит для большинства изображений. Высокоскоростное увеличение с минимальной потерей качества."
+        },
+        "remacri-4x": {
+          "NAME": "Remacri (не для коммерции)",
+          "DESCRIPTION": "Для натуральных изображений. Добавляет резкость и детализацию. Не для коммерческого использования."
+        },
+        "ultramix-balanced-4x": {
+          "NAME": "Ultramix (не для коммерции)",
+          "DESCRIPTION": "Для натуральных изображений с балансом резкости и детализации."
+        },
+        "ultrasharp-4x": {
+          "NAME": "Ultrasharp (не для коммерции)",
+          "DESCRIPTION": "Для натуральных изображений с акцентом на резкость."
+        },
+        "digital-art-4x": {
+          "NAME": "Цифровое искусство",
+          "DESCRIPTION": "Для цифрового искусства и иллюстраций."
+        },
+        "high-fidelity-4x": {
+          "NAME": "Высокая точность",
+          "DESCRIPTION": "Для всех видов изображений с акцентом на реалистичные детали и гладкие текстуры."
+        },
+        "realesr-animevideov3-x2": {
+          "NAME": "Anime Video (2x)",
+          "DESCRIPTION": "For anime and stylized content. Fast 2x upscaling with good quality."
+        },
+        "realesr-animevideov3-x3": {
+          "NAME": "Anime Video (3x)",
+          "DESCRIPTION": "For anime and stylized content. 3x upscaling with balanced quality."
+        },
+        "realesr-animevideov3-x4": {
+          "NAME": "Anime Video (4x)",
+          "DESCRIPTION": "For anime and stylized content. 4x upscaling for maximum detail."
+        }
+      }
+    },
+    "DOUBLE_UPSCAYL": {
+      "TITLE": "Двойное увеличение",
+      "DESCRIPTION": "Включите эту опцию, чтобы дважды увеличить изображение. Обратите внимание, что это может значительно увеличить время обработки и, возможно, вызвать проблемы с производительностью для масштабов больше 4X."
+    },
+    "OUTPUT_PATH_SELECTION": {
+      "TITLE": "Шаг 3",
+      "MAC_APP_STORE_ALERT": "Из-за ограничений безопасности MacOS App Store Rescayl требует выбора папки вывода каждый раз при запуске.\n\nЧтобы избежать этого, вы можете навсегда сохранить папку вывода по умолчанию на вкладке «Настройки» Rescayl.",
+      "NOT_SELECTED": "Не выбрано",
+      "DEFAULT_IMG_PATH": "Стандартный путь изображения",
+      "DEFAULT_FOLDER_PATH": "Стандартный путь папки",
+      "BUTTON_TITLE": "Задать папку вывода"
+    },
+    "SCALE_SELECTION": {
+      "TITLE": "Шаг 4",
+      "FROM_TITLE": "Увеличить с ",
+      "TO_TITLE": " до ",
+      "NO_OUTPUT_FOLDER_ALERT": "Пожалуйста, сначала выберите папку вывода",
+      "START_BUTTON_TITLE": "Увеличить 🚀",
+      "IN_PROGRESS_BUTTON_TITLE": "Увеличение ⏳"
+    },
+    "MORE_OPTIONS_DRAWER": {
+      "RESET_BUTTON_TITLE": "Сбросить изображение",
+      "LENS_VIEW_TITLE": "Просмотр через линзу",
+      "SLIDER_VIEW_TITLE": "Просмотр с ползунком",
+      "ZOOM_AMOUNT_TITLE": "Увеличение",
+      "TOTAL_UPSCAYLS": "Всего увеличений",
+      "TOTAL_BATCH_UPSCAYLS": "Всего пакетных увеличений",
+      "TOTAL_IMAGE_UPSCAYLS": "Всего увеличений изображений",
+      "TOTAL_DOUBLE_UPSCAYLS": "Всего двойных увеличений",
+      "AVERAGE_UPSCAYL_TIME": "Среднее время увеличения",
+      "LAST_UPSCAYL_DURATION": "Длительность последнего увеличения",
+      "LAST_USED_AT": "Последнее использование"
+    },
+    "PROGRESS_BAR": {
+      "BATCH_UPSCAYL_IN_PROGRESS_TITLE": "Пакетное увеличение в процессе:",
+      "IN_PROGRESS_TITLE": "Магия увеличения в процессе...",
+      "STOP_BUTTON_TITLE": "СТОП"
+    },
+    "RESET_BUTTON_TITLE": "Сбросить",
+    "RIGHT_PANE_INFO": {
+      "SELECT_FOLDER": "Выберите папку для увеличения",
+      "SELECT_IMAGE": "Выберите изображение для увеличения",
+      "SELECT_FOLDER_DESCRIPTION": "Убедитесь, что в папке нет ничего, кроме изображений PNG, JPG, JPEG и WEBP.",
+      "SELECT_IMAGES_DESCRIPTION": "Выберите или перетащите изображение в формате PNG, JPG, JPEG или WEBP.",
+      "PASTE_IMAGE_DESCRIPTION": "Нажмите Ctrl+V или ⌘+V, чтобы вставить изображение из буфера обмена"
+    },
+    "PROGRESS": {
+      "PROCESSING_TITLE": "Обработка изображения...",
+      "SCALING_CONVERTING_TITLE": "Масштабирование и конвертация изображения...",
+      "WAIT_TITLE": "Пожалуйста, подождите...",
+      "SUCCESS_TITLE": "Увеличение успешно!",
+      "BATCH": {
+        "SELECTED_FOLDER_TITLE": "Выбранная папка:",
+        "DONE_TITLE": "Всё готово!",
+        "OPEN_UPSCAYLED_FOLDER_TITLE": "Открыть папку с увеличенными изображениями"
+      }
+    },
+    "SLIDER": {
+      "ORIGINAL_TITLE": "Оригинал",
+      "UPSCAYLED_TITLE": "Увеличено"
+    },
+    "DIALOG_BOX": {
+      "CLOSE": "Закрыть"
+    },
+    "BG_REMOVAL": {
+      "TITLE": "Background Removal",
+      "DESCRIPTION": "Automatically remove the background from your images before or after upscaling.",
+      "MODEL_TITLE": "Background Removal Model",
+      "MODEL_DESCRIPTION": "Select AI Model",
+      "REQUIRES_PYTHON": "Background removal requires Python with the 'rembg' package installed (pip install rembg onnxruntime). The model is downloaded on first use.",
+      "OPTIONS": {
+        "OFF": "Off",
+        "BEFORE": "Remove background before upscaling",
+        "AFTER": "Remove background after upscaling"
+      },
+      "MODELS": {
+        "u2netp": {
+          "NAME": "U2Net Portrait (Fast)",
+          "DESCRIPTION": "Lightweight and fast. Good balance of speed and quality for most subjects."
+        },
+        "u2net": {
+          "NAME": "U2Net",
+          "DESCRIPTION": "General purpose background removal with high quality results."
+        },
+        "isnet-general-use": {
+          "NAME": "ISNet General",
+          "DESCRIPTION": "High quality segmentation for general subjects, especially people."
+        },
+        "isnet-anime": {
+          "NAME": "ISNet Anime",
+          "DESCRIPTION": "Tuned for anime and illustration art."
+        },
+        "bria-rmbg-1.4": {
+          "NAME": "BRIA RMBG 1.4",
+          "DESCRIPTION": "Photorealistic background removal with excellent edge detail."
+        }
+      }
+    }
+  },
+  "ERRORS": {
+    "GPU_ERROR": {
+      "TITLE": "Ошибка GPU",
+      "DESCRIPTION": "Произошла проблема с GPU. Пожалуйста, прочитайте документацию для устранения неполадок! ({data})"
+    },
+    "COPY_ERROR": {
+      "TITLE": "Ошибка копирования",
+      "DESCRIPTION": ""
+    },
+    "READ_WRITE_ERROR": {
+      "TITLE": "Ошибка чтения/записи",
+      "DESCRIPTION": "Убедитесь, что путь указан правильно и у вас есть необходимые права на чтение/запись \n({data})"
+    },
+    "TILE_SIZE_ERROR": {
+      "TITLE": "Ошибка",
+      "DESCRIPTION": "Неправильный размер плитки. Пожалуйста, измените размер плитки в настройках или установите значение 0 ({data})"
+    },
+    "EXCEPTION_ERROR": {
+      "TITLE": "Ошибка исключения",
+      "DESCRIPTION": "Rescayl столкнулся с ошибкой. Возможно, двоичный файл upscayl не смог правильно выполнить команды. Попробуйте проверить журнал, чтобы узнать больше информации."
+    },
+    "GENERIC_ERROR": {
+      "TITLE": "Ошибка"
+    },
+    "NO_OUTPUT_FOLDER_ERROR": {
+      "TITLE": "Установить папку вывода",
+      "DESCRIPTION": "Пожалуйста, сначала выберите папку вывода"
+    },
+    "INVALID_IMAGE_ERROR": {
+      "TITLE": "Неверное изображение",
+      "DESCRIPTION": "Пожалуйста, выберите/вставьте изображение с допустимым расширением, таким как PNG, JPG, JPEG, JFIF или WEBP.",
+      "ADDITIONAL_DESCRIPTION": "Пожалуйста, перетащите и отпустите изображение",
+      "CLIPBOARD_DESCRIPTION": "Файл изображения не найден в буфере обмена для вставки!"
+    },
+    "NO_IMAGE_ERROR": {
+      "TITLE": "Изображение не выбрано",
+      "DESCRIPTION": "Пожалуйста, выберите изображение для увеличения"
+    },
+    "METADATA_ERROR": {
+      "TITLE": "Ошибка копирования метаданных",
+      "DESCRIPTION": "Не удалось скопировать метаданные из исходного изображения в созданное изображение. ({data})"
+    }
+  },
+  "WARNING": {
+    "GENERIC_WARNING": {
+      "TITLE": "Предупреждение"
+    },
+    "METADATA_FORMAT": {
+      "TITLE": "Предупреждение о метаданных",
+      "DESCRIPTION": "В некоторых системах метаданные могут не отображаться в форматах, отличных от JPG. При необходимости используйте специальные инструменты для просмотра метаданных."
+    }
+  },
+  "UPSCAYL_CLOUD": {
+    "COMING_SOON": "Скоро будет доступно!",
+    "CATCHY_PHRASE_1": "Больше никаких ошибок, проблем с оборудованием, компромиссов в качестве или долгих загрузок!",
+    "CATCHY_PHRASE_2": "🌐 Rescayl где угодно, в любое время, на любом устройстве\n☁️ Не требуется видеокарта или оборудование\n👩 Улучшение лиц\n🦋 Более 10 моделей на выбор\n🏎 В 5 раз быстрее, чем настольная версия Rescayl\n🎞 Увеличение видео\n💰 Коммерческое использование\n😴 Увеличивайте, пока спите",
+    "ALREADY_REGISTERED_ALERT": "Спасибо, {name}! Похоже, ваш email уже зарегистрирован :D Если это не так, пожалуйста, попробуйте снова.",
+    "ADD_SUCCESS": "Спасибо за присоединение к списку ожидания! Мы уведомим вас, когда Rescayl Cloud будет готов для вас.",
+    "INCORRECT_FIELDS_ALERT": "Пожалуйста, правильно заполните все поля.",
+    "JOIN_WAITLIST": "Присоединиться к списку ожидания",
+    "DONT_SHOW_AGAIN": "БОЛЬШЕ НЕ ПОКАЗЫВАТЬ"
+  },
+  "ONBOARDING_DIALOG": {
+    "NEXT_BUTTON_TITLE": "Далее",
+    "BACK_BUTTON_TITLE": "Назад",
+    "GET_STARTED_BUTTON_TITLE": "Начать",
+    "SETTINGS_NOTE": "Вы всегда можете изменить эти настройки позже.",
+    "STEP_1": {
+      "TITLE": "Добро пожаловать в Rescayl 🎉",
+      "DESCRIPTION": "Давайте начнём с нескольких быстрых шагов."
+    },
+    "STEP_2": {
+      "TITLE": "Выберите свои предпочтения 🎨",
+      "DESCRIPTION": "Настройте начальные параметры."
+    },
+    "STEP_3": {
+      "TITLE": "Все готово! 🎉",
+      "DESCRIPTION": "Теперь вы готовы начать увеличивать изображения с помощью Rescayl!"
+    }
+  }
+}

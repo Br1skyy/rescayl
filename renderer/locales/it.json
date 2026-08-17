@@ -1,0 +1,345 @@
+{
+  "TITLE": "Rescayl",
+  "INTRO": "Presentazione di Rescayl Cloud !",
+  "HEADER": {
+    "DESCRIPTION": "Campionatore di immagini AI"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "Copyright ©"
+  },
+  "SETTINGS": {
+    "TITLE": "Parametri",
+    "CHANGE_LANGUAGE": {
+      "TITLE": "Cambia lingua"
+    },
+    "IMAGE_COMPRESSION": {
+      "TITLE": "Compressione di immagine",
+      "DESCRIPTION": "La compressione PNG è senza perdite, quindi potrebbe non ridurre significativamente le dimensioni del file e valori di compressione più elevati potrebbero influire sulle prestazioni. La compressione JPG e WebP è con perdita di dati."
+    },
+    "CUSTOM_MODELS": {
+      "TITLE": "AGGIUNGI MODELLI PERSONALIZZATI",
+      "BUTTON_FOLDER": "Seleziona una cartella",
+      "DESCRIPTION": "Puoi aggiungere facilmente i tuoi modelli. Per maggiori dettagli :"
+    },
+    "CUSTOM_INPUT_RESOLUTION": {
+      "TITLE": "LARGHEZZA DI USCITA PERSONALIZZATA",
+      "RESTART": "RICHIEDE UN RIAVVIO",
+      "DESCRIPTION": "Utilizza una larghezza personalizzata per le immagini di output. L'altezza verrà regolata automaticamente. Abilitando questa opzione si sovrascriverà l'impostazione della scala."
+    },
+    "GPU_ID_INPUT": {
+      "TITLE": "ID GPU",
+      "DESCRIPTION": "Per ulteriori informazioni, leggere la documentazione di Rescayl.",
+      "ADDITIONAL_DESCRIPTION": "Abilita la modalità prestazioni su Windows per ottenere i migliori risultati."
+    },
+    "IMAGE_FORMAT": {
+      "TITLE": "SALVA IMMAGINE COME",
+      "PNG": "PNG",
+      "JPG": "JPG",
+      "WEBP": "WEBP"
+    },
+    "COPY_METADATA": {
+      "TITLE": "COPIA METADATI IMMAGINE",
+      "DESCRIPTION": "Mantieni i metadati originali dell'immagine (EXIF) nell'immagine sovracampionata.",
+      "SUGGEST_JPG_TITLE": "Modifica Formato Consigliata",
+      "SUGGEST_JPG_DESCRIPTION": "Per una migliore compatibilità dei metadati tra sistemi diversi, consigliamo di utilizzare il formato JPG. Vuoi cambiare?",
+      "CHANGE_TO_JPG": "Cambia in JPG",
+      "KEEP_CURRENT_FORMAT": "Mantieni {format}"
+    },
+    "IMAGE_SCALE": {
+      "TITLE": "Scala dell'immagine",
+      "DESCRIPTION": "Qualsiasi valore superiore a 4X (eccetto 16X Double Rescayl) ridimensiona solo l'immagine e non utilizza l'upsampling AI.",
+      "WARNING": "Qualsiasi valore superiore a 5X può causare problemi di prestazioni su alcuni dispositivi !",
+      "ADDITIONAL_WARNING": "Ciò potrebbe causare problemi di prestazioni su alcuni dispositivi !"
+    },
+    "LOG_AREA": {
+      "ON_COPY": "COPIA ✅",
+      "BUTTON_TITLE": "COPIA LOG 📋",
+      "NO_LOGS": "Nessun registro da visualizzare"
+    },
+    "OVERWRITE_TOGGLE": {
+      "TITLE": "SOVRASCRIVERE IL SOVRACAMPIONAMENTO PRECEDENTE",
+      "DESCRIPTION": "Se abilitato, Rescayl rielaborerà l'immagine invece di caricarla direttamente."
+    },
+    "RESET_SETTINGS": {
+      "BUTTON_TITLE": "RIPRISTINA UPSCAYL",
+      "ALERT": "Rescayl è stato ripristinato. Riavviare l'applicazione."
+    },
+    "SAVE_OUTPUT_FOLDER": {
+      "TITLE": "SALVA FILE DI USCITA",
+      "DESCRIPTION": "Se abilitata, la cartella di output verrà memorizzata tra una sessione e l'altra."
+    },
+    "AUTO_UPDATE": {
+      "TITLE": "AGGIORNAMENTO AUTOMATICO DI UPSCAYL",
+      "DESCRIPTION": "Se abilitato, l'app controllerà la presenza di nuovi aggiornamenti e ti avviserà."
+    },
+    "ENABLE_CONTRIBUTION": {
+      "TITLE": "AIUTA A MIGLIORARE UPSCAYL",
+      "DESCRIPTION": "Se abilitato, Rescayl raccoglierà dati di utilizzo anonimi per migliorare l'interfaccia e la funzionalità dell'app."
+    },
+    "THEME": {
+      "TITLE": "TEMA DI UPSCAYL"
+    },
+    "LANGUAGE": {
+      "TITLE": "LINGUA DI UPSCAYL"
+    },
+    "CUSTOM_TILE_SIZE": {
+      "TITLE": "DIMENSIONE PERSONALIZZATA DEL RIQUADRO",
+      "DESCRIPTION": "Utilizza una dimensione di riquadro personalizzata per segmentare l'immagine. Ciò può aiutare a elaborare le immagini più velocemente riducendo il numero di riquadri generati."
+    },
+    "TURN_OFF_NOTIFICATIONS": {
+      "TITLE": "DISATTIVARE LE NOTIFICHE",
+      "DESCRIPTION": "Se abilitato, Rescayl non invierà alcuna notifica di sistema in caso di successo o errore."
+    },
+    "TTA_MODE": {
+      "TITLE": "Modalità TTA",
+      "DESCRIPTION": "Abilita un tempo di test più lungo per ottenere risultati migliori, come la rimozione di artefatti, MA aumenterà il tempo di elaborazione di 8 volte !"
+    },
+    "SYSTEM_INFO": {
+      "TITLE": "Informazioni di sistema"
+    },
+    "PRESERVE_FILENAME": {
+      "TITLE": "PRESERVE ORIGINAL FILENAME",
+      "DESCRIPTION": "If enabled, the upscaled image keeps the original filename instead of appending the scale and model."
+    }
+  },
+  "APP": {
+    "TITLE": "Rescayl",
+    "BATCH_MODE": {
+      "TITLE": "Sovracampionamento batch",
+      "DESCRIPTION": "Ciò ti consentirà di sovracampionare tutti i file in una cartella contemporaneamente"
+    },
+    "FILE_SELECTION": {
+      "TITLE": "Fase 1",
+      "BATCH_MODE_TYPE": "Seleziona una cartella",
+      "SINGLE_MODE_TYPE": "Seleziona un'immagine"
+    },
+    "MODEL_SELECTION": {
+      "TITLE": "Fase 2",
+      "DESCRIPTION": "Seleziona modello AI",
+      "IMPORTED_CUSTOM_MODELS": "Modelli personalizzati importati",
+      "BEFORE": "Prima",
+      "AFTER": "Dopo",
+      "ZOOM": "Zoom",
+      "MODELS": {
+        "upscayl-standard-4x": {
+          "NAME": "Rescayl Standard",
+          "DESCRIPTION": "Adatto per la maggior parte delle immagini."
+        },
+        "upscayl-lite-4x": {
+          "NAME": "Rescayl Lite",
+          "DESCRIPTION": "Adatto per la maggior parte delle immagini. Sovracampionamento veloce con perdita di qualità minima."
+        },
+        "remacri-4x": {
+          "NAME": "Remacri (Non-Commerciale)",
+          "DESCRIPTION": "Per immagini naturali. Aggiunge nitidezza e dettaglio. Nessun uso commerciale."
+        },
+        "ultramix-balanced-4x": {
+          "NAME": "Ultramix (Non-Commerciale)",
+          "DESCRIPTION": "Per immagini naturali con un equilibrio tra nitidezza e dettaglio."
+        },
+        "ultrasharp-4x": {
+          "NAME": "Ultrasharp (Non-Commerciale)",
+          "DESCRIPTION": "Per immagini naturali con un'enfasi sulla nitidezza."
+        },
+        "digital-art-4x": {
+          "NAME": "Arte digitale",
+          "DESCRIPTION": "Per arte digitale e illustrazioni."
+        },
+        "high-fidelity-4x": {
+          "NAME": "Alta fedeltà",
+          "DESCRIPTION": "Per tutti i tipi di immagini con un'enfasi su dettagli realistici e texture morbide."
+        },
+        "realesr-animevideov3-x2": {
+          "NAME": "Anime Video (2x)",
+          "DESCRIPTION": "For anime and stylized content. Fast 2x upscaling with good quality."
+        },
+        "realesr-animevideov3-x3": {
+          "NAME": "Anime Video (3x)",
+          "DESCRIPTION": "For anime and stylized content. 3x upscaling with balanced quality."
+        },
+        "realesr-animevideov3-x4": {
+          "NAME": "Anime Video (4x)",
+          "DESCRIPTION": "For anime and stylized content. 4x upscaling for maximum detail."
+        }
+      }
+    },
+    "DOUBLE_UPSCAYL": {
+      "TITLE": "Doppio Rescayl",
+      "DESCRIPTION": "Abilita questa opzione per eseguire il supercampionamento due volte su un'immagine. Tieni presente che ciò potrebbe causare un aumento significativo del tempo di elaborazione e possibili problemi di prestazioni per scale superiori a 4X."
+    },
+    "OUTPUT_PATH_SELECTION": {
+      "TITLE": "Fase 3",
+      "MAC_APP_STORE_ALERT": "A causa delle restrizioni di sicurezza dell'App Store di MacOS, Rescayl richiede di selezionare una cartella di output ogni volta che lo avvii.\n\nPer evitare ciò, puoi salvare in modo permanente una cartella di output predefinita nella \"scheda\" Impostazioni Rescayl.",
+      "NOT_SELECTED": "Non selezionato",
+      "DEFAULT_IMG_PATH": "Per impostazione predefinita è il percorso dell'immagine",
+      "DEFAULT_FOLDER_PATH": "Per impostazione predefinita è il percorso della cartella",
+      "BUTTON_TITLE": "Imposta la cartella di output"
+    },
+    "SCALE_SELECTION": {
+      "TITLE": "Fase 4",
+      "FROM_TITLE": "Sovracampionamento di ",
+      "TO_TITLE": " a ",
+      "NO_OUTPUT_FOLDER_ALERT": "Seleziona prima una cartella di output",
+      "START_BUTTON_TITLE": "Sovracampionare 🚀",
+      "IN_PROGRESS_BUTTON_TITLE": "Sovracampionamento ⏳"
+    },
+    "MORE_OPTIONS_DRAWER": {
+      "RESET_BUTTON_TITLE": "Reimposta immagine",
+      "LENS_VIEW_TITLE": "Vista dell'obiettivo",
+      "SLIDER_VIEW_TITLE": "Vista cursore",
+      "ZOOM_AMOUNT_TITLE": "Livello di zoom",
+      "TOTAL_UPSCAYLS": "Sovracampionamento totale",
+      "TOTAL_BATCH_UPSCAYLS": "Sovracampionamento totale per batch",
+      "TOTAL_IMAGE_UPSCAYLS": "Sovracampionamento totale dell'immagine",
+      "TOTAL_DOUBLE_UPSCAYLS": "Doppio sovracampionamento totale",
+      "AVERAGE_UPSCAYL_TIME": "Tempo medio di sovracampionamento",
+      "LAST_UPSCAYL_DURATION": "Durata dell'ultimo sovracampionamento",
+      "LAST_USED_AT": "Ultimo usato"
+    },
+    "PROGRESS_BAR": {
+      "BATCH_UPSCAYL_IN_PROGRESS_TITLE": "Sovracampionamento batch in corso :",
+      "IN_PROGRESS_TITLE": "Fare la magia del sovracampionamento...",
+      "STOP_BUTTON_TITLE": "FERMARE"
+    },
+    "RESET_BUTTON_TITLE": "Resettare",
+    "RIGHT_PANE_INFO": {
+      "SELECT_FOLDER": "Seleziona una cartella da sovracampionare",
+      "SELECT_IMAGE": "Seleziona un'immagine da sovracampionare",
+      "SELECT_FOLDER_DESCRIPTION": "Assicurati che la cartella non contenga altro che immagini PNG, JPG, JPEG e WEBP.",
+      "SELECT_IMAGES_DESCRIPTION": "Seleziona o trascina e rilascia un'immagine PNG, JPG, JPEG o WEBP.",
+      "PASTE_IMAGE_DESCRIPTION": "Premi Ctrl+V o ⌘+V per incollare l'immagine dagli appunti"
+    },
+    "PROGRESS": {
+      "PROCESSING_TITLE": "Elaborazione immagine...",
+      "SCALING_CONVERTING_TITLE": "Ridimensionamento e conversione dell'immagine...",
+      "WAIT_TITLE": "Attendere...",
+      "SUCCESS_TITLE": "Sovracampionamento riuscito !",
+      "BATCH": {
+        "SELECTED_FOLDER_TITLE": "Cartella selezionata :",
+        "DONE_TITLE": "È terminato !",
+        "OPEN_UPSCAYLED_FOLDER_TITLE": "Apri la cartella sovracampionata"
+      }
+    },
+    "SLIDER": {
+      "ORIGINAL_TITLE": "Originale",
+      "UPSCAYLED_TITLE": "Sovracampionato"
+    },
+    "DIALOG_BOX": {
+      "CLOSE": "Chiudi"
+    },
+    "BG_REMOVAL": {
+      "TITLE": "Background Removal",
+      "DESCRIPTION": "Automatically remove the background from your images before or after upscaling.",
+      "MODEL_TITLE": "Background Removal Model",
+      "MODEL_DESCRIPTION": "Select AI Model",
+      "REQUIRES_PYTHON": "Background removal requires Python with the 'rembg' package installed (pip install rembg onnxruntime). The model is downloaded on first use.",
+      "OPTIONS": {
+        "OFF": "Off",
+        "BEFORE": "Remove background before upscaling",
+        "AFTER": "Remove background after upscaling"
+      },
+      "MODELS": {
+        "u2netp": {
+          "NAME": "U2Net Portrait (Fast)",
+          "DESCRIPTION": "Lightweight and fast. Good balance of speed and quality for most subjects."
+        },
+        "u2net": {
+          "NAME": "U2Net",
+          "DESCRIPTION": "General purpose background removal with high quality results."
+        },
+        "isnet-general-use": {
+          "NAME": "ISNet General",
+          "DESCRIPTION": "High quality segmentation for general subjects, especially people."
+        },
+        "isnet-anime": {
+          "NAME": "ISNet Anime",
+          "DESCRIPTION": "Tuned for anime and illustration art."
+        },
+        "bria-rmbg-1.4": {
+          "NAME": "BRIA RMBG 1.4",
+          "DESCRIPTION": "Photorealistic background removal with excellent edge detail."
+        }
+      }
+    }
+  },
+  "ERRORS": {
+    "GPU_ERROR": {
+      "TITLE": "Errore della GPU",
+      "DESCRIPTION": "Si è verificato un problema con la GPU. Si prega di leggere la documentazione per la risoluzione dei problemi! ({data})"
+    },
+    "COPY_ERROR": {
+      "TITLE": "Errore di copia",
+      "DESCRIPTION": "Si è verificato un errore durante la copia del file. Verifica i permessi e lo spazio disponibile."
+    },
+    "READ_WRITE_ERROR": {
+      "TITLE": "Errore di lettura/scrittura",
+      "DESCRIPTION": "Assicurati che il percorso sia corretto e di disporre delle autorizzazioni di lettura/scrittura appropriate \n({data})"
+    },
+    "TILE_SIZE_ERROR": {
+      "TITLE": "Errore",
+      "DESCRIPTION": "La dimensione del riquadro non è corretta. Modifica la dimensione del riquadro nelle impostazioni o impostala su 0 ({data})"
+    },
+    "EXCEPTION_ERROR": {
+      "TITLE": "Errore di eccezione",
+      "DESCRIPTION": "Rescayl ha riscontrato un errore. È possibile che il binario Rescayl non sia riuscito a eseguire correttamente i comandi. Prova a controllare i log per vedere se ottieni qualche informazione."
+    },
+    "GENERIC_ERROR": {
+      "TITLE": "Errore"
+    },
+    "NO_OUTPUT_FOLDER_ERROR": {
+      "TITLE": "Imposta la cartella di output",
+      "DESCRIPTION": "Seleziona prima una cartella di output"
+    },
+    "INVALID_IMAGE_ERROR": {
+      "TITLE": "Immagine non valida",
+      "DESCRIPTION": "Seleziona/incolla un'immagine con un'estensione valida come PNG, JPG, JPEG, JFIF o WEBP.",
+      "ADDITIONAL_DESCRIPTION": "Trascina e rilascia un'immagine",
+      "CLIPBOARD_DESCRIPTION": "Nessun file immagine trovato negli appunti da incollare !"
+    },
+    "NO_IMAGE_ERROR": {
+      "TITLE": "Nessuna immagine selezionata",
+      "DESCRIPTION": "Seleziona un'immagine da sovracampionare"
+    },
+    "METADATA_ERROR": {
+      "TITLE": "Errore di Copia Metadati",
+      "DESCRIPTION": "Impossibile copiare i metadati dall'immagine originale all'immagine generata. ({data})"
+    }
+  },
+  "WARNING": {
+    "GENERIC_WARNING": {
+      "TITLE": "Avviso"
+    },
+    "METADATA_FORMAT": {
+      "TITLE": "Avviso sui metadati",
+      "DESCRIPTION": "Su alcuni sistemi, i metadati potrebbero non essere visibili in formati diversi da JPG. Utilizza strumenti specifici per visualizzare i metadati se necessario."
+    }
+  },
+  "UPSCAYL_CLOUD": {
+    "COMING_SOON": "Presto disponibile !",
+    "CATCHY_PHRASE_1": "Niente più errori, problemi hardware, compromessi di qualità o lunghi tempi di caricamento !",
+    "CATCHY_PHRASE_2": "🌐 Effettua l'upsample ovunque, in qualsiasi momento, su qualsiasi dispositivo\n☁️ Nessuna scheda grafica o hardware richiesto\n👩 Miglioramento del viso\n🦋 Più di 10 modelli tra cui scegliere\n🏎 5 volte più veloce di Rescayl Desktop\n🎞 Sovracampionamento video\n💰 Uso commerciale\n😴 Sovracampiona mentre voi dormite",
+    "ALREADY_REGISTERED_ALERT": "Grazie {name} ! Sembra che la tua email sia già stata salvata :D In caso contrario, riprova.",
+    "ADD_SUCCESS": "Grazie per esserti iscritto alla lista d'attesa! Ti faremo sapere quando Rescayl Cloud sarà pronto per te.",
+    "INCORRECT_FIELDS_ALERT": "Ti preghiamo di compilare correttamente tutti i campi.",
+    "JOIN_WAITLIST": "Iscriviti alla lista d'attesa",
+    "DONT_SHOW_AGAIN": "NON MOSTRARE PIÙ"
+  },
+  "ONBOARDING_DIALOG": {
+    "NEXT_BUTTON_TITLE": "Avanti",
+    "BACK_BUTTON_TITLE": "Indietro",
+    "GET_STARTED_BUTTON_TITLE": "Inizia",
+    "SETTINGS_NOTE": "Puoi sempre modificare queste impostazioni in un secondo momento.",
+    "STEP_1": {
+      "TITLE": "Benvenuto su Rescayl 🎉",
+      "DESCRIPTION": "Iniziamo con alcuni rapidi passaggi."
+    },
+    "STEP_2": {
+      "TITLE": "Scegli le tue preferenze 🎨",
+      "DESCRIPTION": "Configura le tue impostazioni iniziali."
+    },
+    "STEP_3": {
+      "TITLE": "Sei pronto ! 🎉",
+      "DESCRIPTION": "Sei pronto per iniziare a sovracampionare le immagini con Rescayl !"
+    }
+  }
+}
