@@ -86,9 +86,7 @@ pub async fn command(
                 .unwrap_or_default();
             open_folder(path).map(|_| Value::Null)
         }
-        CMD_SELECT_CUSTOM_MODEL_FOLDER => {
-            select_custom_model_folder(&app).map(|v| json!(v))
-        }
+        CMD_SELECT_CUSTOM_MODEL_FOLDER => select_custom_model_folder(&app).map(|v| json!(v)),
         CMD_GET_MODELS_LIST => {
             let path = payload.and_then(|v| v.as_str().map(|s| s.to_string()));
             get_models_list(&app, path);
@@ -98,9 +96,7 @@ pub async fn command(
             stop(&app);
             Ok(Value::Null)
         }
-        CMD_PASTE_IMAGE => {
-            paste_image(&app, payload).map(|_| Value::Null)
-        }
+        CMD_PASTE_IMAGE => paste_image(&app, payload).map(|_| Value::Null),
         CMD_SCAN_CUSTOM_MODELS => {
             scan_custom_models_cmd(&app);
             Ok(Value::Null)
@@ -109,24 +105,20 @@ pub async fn command(
             open_custom_models_folder(&app);
             Ok(Value::Null)
         }
-        CMD_FETCH_MARKETPLACE => {
-            fetch_marketplace_cmd(&app).await
-        }
-        CMD_DOWNLOAD_MARKETPLACE_MODEL => {
-            download_marketplace_model_cmd(&app, payload).await
-        }
-        CMD_SAVE_MODEL_REVIEW => {
-            save_model_review_cmd(payload).map(|_| Value::Null)
-        }
+        CMD_FETCH_MARKETPLACE => fetch_marketplace_cmd(&app).await,
+        CMD_DOWNLOAD_MARKETPLACE_MODEL => download_marketplace_model_cmd(&app, payload).await,
+        CMD_SAVE_MODEL_REVIEW => save_model_review_cmd(payload).map(|_| Value::Null),
         CMD_UNINSTALL_CUSTOM_MODEL => {
             uninstall_custom_model_cmd(&app, payload)?;
             Ok(Value::Null)
         }
-        CMD_GET_DEFAULT_CUSTOM_MODELS_DIR => {
-            Ok(json!(custom_models::default_custom_models_dir().display().to_string()))
-        }
+        CMD_GET_DEFAULT_CUSTOM_MODELS_DIR => Ok(json!(custom_models::default_custom_models_dir()
+            .display()
+            .to_string())),
         CMD_GET_CUSTOM_MODELS => Ok(json!(get_custom_models(&app))),
-        CMD_GET_CUSTOM_MODELS_DIR => Ok(json!(current_custom_models_dir(&app).display().to_string())),
+        CMD_GET_CUSTOM_MODELS_DIR => {
+            Ok(json!(current_custom_models_dir(&app).display().to_string()))
+        }
         CMD_SET_CUSTOM_MODELS_DIR => {
             let path = payload
                 .and_then(|v| v.as_str().map(|s| s.to_string()))
@@ -203,10 +195,13 @@ fn open_custom_models_folder(app: &AppHandle) {
 
 async fn fetch_marketplace_cmd(app: &AppHandle) -> Result<Value, String> {
     let manifest = marketplace::fetch_manifest(app).await?;
-    Ok(serde_json::to_value(manifest).map_err(|e| e.to_string())?)
+    serde_json::to_value(manifest).map_err(|e| e.to_string())
 }
 
-async fn download_marketplace_model_cmd(app: &AppHandle, payload: Option<Value>) -> Result<Value, String> {
+async fn download_marketplace_model_cmd(
+    app: &AppHandle,
+    payload: Option<Value>,
+) -> Result<Value, String> {
     let model_id = payload
         .and_then(|v| v.as_str().map(|s| s.to_string()))
         .ok_or_else(|| "Missing model id".to_string())?;
@@ -253,13 +248,11 @@ fn uninstall_custom_model_cmd(app: &AppHandle, payload: Option<Value>) -> Result
         return Err(format!("'{}' is not a model directory", model_id));
     }
 
-    let base = std::fs::canonicalize(&custom_models_dir)
-        .unwrap_or_else(|_| custom_models_dir.clone());
+    let base =
+        std::fs::canonicalize(&custom_models_dir).unwrap_or_else(|_| custom_models_dir.clone());
     let target = std::fs::canonicalize(&dir).unwrap_or_else(|_| dir.clone());
     if !target.starts_with(&base) {
-        return Err(
-            "Refusing to delete a path outside the custom models directory".to_string(),
-        );
+        return Err("Refusing to delete a path outside the custom models directory".to_string());
     }
 
     std::fs::remove_dir_all(&target)
@@ -276,8 +269,8 @@ fn save_model_review_cmd(payload: Option<Value>) -> Result<Value, String> {
         rating: u8,
         review: String,
     }
-    let review: Review = serde_json::from_value(payload.unwrap_or(Value::Null))
-        .map_err(|e| e.to_string())?;
+    let review: Review =
+        serde_json::from_value(payload.unwrap_or(Value::Null)).map_err(|e| e.to_string())?;
     marketplace::save_review(&review.model_id, review.rating, &review.review)?;
     Ok(Value::Null)
 }
@@ -288,7 +281,9 @@ fn select_file(app: &AppHandle) -> Result<Option<String>, String> {
 
     let mut picker = app.dialog().file().add_filter(
         "Images",
-        &["png", "jpg", "jpeg", "jfif", "webp", "PNG", "JPG", "JPEG", "JFIF", "WEBP"],
+        &[
+            "png", "jpg", "jpeg", "jfif", "webp", "PNG", "JPG", "JPEG", "JFIF", "WEBP",
+        ],
     );
     if let Some(dir) = default_dir {
         picker = picker.set_directory(dir);
@@ -442,8 +437,8 @@ struct PasteImagePayload {
 }
 
 fn paste_image(app: &AppHandle, payload: Option<Value>) -> Result<(), String> {
-    let p: PasteImagePayload = serde_json::from_value(payload.unwrap_or(Value::Null))
-        .map_err(|e| e.to_string())?;
+    let p: PasteImagePayload =
+        serde_json::from_value(payload.unwrap_or(Value::Null)).map_err(|e| e.to_string())?;
 
     let ext = p.extension.to_lowercase();
     if !VALID_EXTENSIONS.contains(&ext.as_str()) {
@@ -458,7 +453,10 @@ fn paste_image(app: &AppHandle, payload: Option<Value>) -> Result<(), String> {
 
     let file_path = PathBuf::from(&p.path).join(&p.name);
     std::fs::write(&file_path, bytes).map_err(|e| e.to_string())?;
-    let _ = app.emit(EVENT_PASTE_IMAGE_SAVE_SUCCESS, file_path.display().to_string());
+    let _ = app.emit(
+        EVENT_PASTE_IMAGE_SAVE_SUCCESS,
+        file_path.display().to_string(),
+    );
     Ok(())
 }
 
@@ -470,7 +468,10 @@ pub fn get_system_info() -> Value {
     sys.refresh_cpu_specifics(sysinfo::CpuRefreshKind::everything());
 
     let cpus = sys.cpus();
-    let model = cpus.first().map(|c| c.brand().to_string()).unwrap_or_default();
+    let model = cpus
+        .first()
+        .map(|c| c.brand().to_string())
+        .unwrap_or_default();
 
     json!({
         "platform": platform_os(),

@@ -145,7 +145,8 @@ fn file_stem(p: &str) -> String {
         .unwrap_or(name)
 }
 
-pub(crate) fn get_model_scale(model: &str) -> String {    let m = model.to_lowercase();
+pub(crate) fn get_model_scale(model: &str) -> String {
+    let m = model.to_lowercase();
     if m.contains("x2") || m.contains("2x") {
         "2".into()
     } else if m.contains("x3") || m.contains("3x") {
@@ -155,6 +156,7 @@ pub(crate) fn get_model_scale(model: &str) -> String {    let m = model.to_lower
     }
 }
 
+#[allow(clippy::too_many_arguments)]
 fn build_out_file(
     output_dir: &str,
     input_path: &str,
@@ -165,21 +167,18 @@ fn build_out_file(
     preserve_filename: bool,
     bg_removal_mode: &str,
 ) -> String {
-    let bg_tag = if bg_removal_mode != "off" { "-bgremoved" } else { "" };
+    let bg_tag = if bg_removal_mode != "off" {
+        "-bgremoved"
+    } else {
+        ""
+    };
     if preserve_filename {
         let original_name = get_file_name(input_path);
         let stem = original_name
             .rsplit_once('.')
             .map(|(s, _)| s.to_string())
             .unwrap_or(original_name);
-        return format!(
-            "{}{}{}{}.{}",
-            output_dir,
-            path_sep(),
-            stem,
-            bg_tag,
-            save_as
-        );
+        return format!("{}{}{}{}.{}", output_dir, path_sep(), stem, bg_tag, save_as);
     }
     let suffix = match custom_width {
         Some(w) => format!("{}px", w),
@@ -204,7 +203,10 @@ fn dedup_out_path(out: &str) -> String {
     }
     let path = Path::new(out);
     let parent = path.parent().unwrap_or_else(|| Path::new("."));
-    let stem = path.file_stem().and_then(|s| s.to_str()).unwrap_or("output");
+    let stem = path
+        .file_stem()
+        .and_then(|s| s.to_str())
+        .unwrap_or("output");
     let ext = path.extension().and_then(|s| s.to_str()).unwrap_or("");
     let mut counter = 2u32;
     loop {
@@ -216,6 +218,7 @@ fn dedup_out_path(out: &str) -> String {
     }
 }
 
+#[allow(clippy::too_many_arguments)]
 fn build_args(
     input: String,
     out: String,
@@ -232,12 +235,7 @@ fn build_args(
 ) -> Vec<String> {
     let model_scale = get_model_scale(model);
     let include_scale = model_scale != scale && !use_custom_width;
-    let mut args: Vec<String> = Vec::new();
-
-    args.push("-i".into());
-    args.push(input);
-    args.push("-o".into());
-    args.push(out);
+    let mut args: Vec<String> = vec!["-i".into(), input, "-o".into(), out];
 
     if include_scale {
         args.push("-s".into());
@@ -284,10 +282,7 @@ fn build_args(
 
     // Tune NCNN load/proc/save threads. The binary default is 1:2:2; using
     // more proc threads speeds up tile processing on multi-core CPUs.
-    if let Some(cores) = std::thread::available_parallelism()
-        .ok()
-        .map(|n| n.get())
-    {
+    if let Some(cores) = std::thread::available_parallelism().ok().map(|n| n.get()) {
         let proc = cores.clamp(2, 8);
         let save = cores.clamp(2, 4);
         args.push("-j".into());
@@ -341,8 +336,10 @@ fn spawn_and_track(
     let mut children = state.children.lock().unwrap();
     let mut i = 0;
     while i < children.len() {
-        if children[i].try_wait().map(|o| o.is_some()).unwrap_or(true) {
-            children.swap_remove(i);
+        let exited = children[i].try_wait().map(|o| o.is_some()).unwrap_or(true);
+        if exited {
+            let mut dead = children.swap_remove(i);
+            let _ = dead.wait();
         } else {
             i += 1;
         }
@@ -402,7 +399,11 @@ fn stream_lines(app: &AppHandle, reader: impl BufRead, progress_event: &str) -> 
 /// through `progress_event` as it runs. Returns an error if the process
 /// reported a failure. The stop flag and the tracked child remain in state so
 /// STOP can interrupt a running image.
-fn run_process_sync(app: &AppHandle, args: Vec<String>, progress_event: &str) -> Result<(), String> {
+fn run_process_sync(
+    app: &AppHandle,
+    args: Vec<String>,
+    progress_event: &str,
+) -> Result<(), String> {
     let (stdout, stderr) = spawn_and_track(app, args)?;
     let mut failed = false;
     if let Some(out) = stdout {
@@ -510,12 +511,10 @@ fn copy_batch_metadata(input_dir: &str, output_dir: &str) -> Result<(), String> 
         let name = entry.file_name();
         let original = Path::new(input_dir).join(&name);
         if out_file.is_file() && original.exists() {
-            if let Err(e) = copy_metadata(
+            copy_metadata(
                 original.to_str().unwrap_or_default(),
                 out_file.to_str().unwrap_or_default(),
-            ) {
-                return Err(e);
-            }
+            )?;
         }
     }
     Ok(())
@@ -544,12 +543,15 @@ fn find_exiftool() -> Option<PathBuf> {
     None
 }
 
-pub(crate) fn bg_remove(app: &AppHandle, input: &str, output: &str, _model: &str) -> Result<(), String> {
+pub(crate) fn bg_remove(
+    app: &AppHandle,
+    input: &str,
+    output: &str,
+    _model: &str,
+) -> Result<(), String> {
     let state = app.state::<AppState>();
     let (_, models_dir) = crate::resource::resolve_paths(app);
-    let model_path = models_dir
-        .join("bg")
-        .join("isnet-general-use.onnx");
+    let model_path = models_dir.join("bg").join("isnet-general-use.onnx");
     crate::bg_remove::remove_background(
         input,
         output,
@@ -571,7 +573,10 @@ fn bg_remove_before(
 ) -> Result<PathBuf, String> {
     let stem = file_stem(input);
     let temp = PathBuf::from(output_dir).join(format!(".rescayl-bg-{}.png", stem));
-    logit(app, &format!("🎨 Removing background before upscaling ({})", model));
+    logit(
+        app,
+        &format!("🎨 Removing background before upscaling ({})", model),
+    );
     bg_remove(app, input, temp.to_str().unwrap(), model)?;
     Ok(temp)
 }
@@ -585,7 +590,10 @@ fn bg_remove_after(
     model: &str,
     save_as: &str,
 ) -> Result<(), String> {
-    logit(app, &format!("🎨 Removing background after upscaling ({})", model));
+    logit(
+        app,
+        &format!("🎨 Removing background after upscaling ({})", model),
+    );
     let stem = file_stem(output);
     let ext = get_file_name(output)
         .rsplit_once('.')
@@ -596,7 +604,8 @@ fn bg_remove_after(
         .unwrap_or_else(|| Path::new("."))
         .join(format!(".rescayl-bg-out-{}.{}", stem, ext));
     bg_remove(app, output, temp.to_str().unwrap(), model)?;
-    std::fs::rename(&temp, output).map_err(|e| format!("Failed to save background-removed image: {}", e))
+    std::fs::rename(&temp, output)
+        .map_err(|e| format!("Failed to save background-removed image: {}", e))
 }
 
 fn bg_removal_enabled(mode: &str, model: &str) -> bool {
@@ -649,12 +658,7 @@ pub fn process_single(
         && bg_removal_enabled(&payload.bg_removal_mode, &payload.bg_removal_model);
     let mut bg_temp: Option<PathBuf> = None;
     if bg_before {
-        let temp = bg_remove_before(
-            app,
-            &input_path,
-            &output_dir,
-            &payload.bg_removal_model,
-        )?;
+        let temp = bg_remove_before(app, &input_path, &output_dir, &payload.bg_removal_model)?;
         input_path = temp.display().to_string();
         bg_temp = Some(temp);
     }
@@ -700,9 +704,7 @@ pub fn process_single(
         let _ = std::fs::remove_file(&temp);
     }
 
-    if let Err(e) = run_result {
-        return Err(e);
-    }
+    run_result?;
 
     // If user hit STOP during upscaling, treat as cancelled.
     if *app.state::<AppState>().stopped.lock().unwrap() {
@@ -715,8 +717,12 @@ pub fn process_single(
     let bg_after = payload.bg_removal_mode == "after"
         && bg_removal_enabled(&payload.bg_removal_mode, &payload.bg_removal_model);
     if bg_after {
-        if let Err(e) = bg_remove_after(app, &out_file, &payload.bg_removal_model, &payload.save_image_as)
-        {
+        if let Err(e) = bg_remove_after(
+            app,
+            &out_file,
+            &payload.bg_removal_model,
+            &payload.save_image_as,
+        ) {
             logit(app, &format!("❌ Error removing background: {}", e));
             return Err(e);
         }
@@ -812,15 +818,16 @@ pub fn run_batch(app: &AppHandle, payload: BatchUpscaylPayload) -> Result<(), St
         Some(w) => format!("{}px", w),
         None => format!("{}x", payload.scale),
     };
-    let folder_name = format!("upscayl_{}_{}_{}", payload.save_image_as, payload.model, suffix);
-    let bg_tag = if payload.bg_removal_mode != "off" { "-bgremoved" } else { "" };
-    let output_folder = format!(
-        "{}{}{}{}",
-        output_dir,
-        path_sep(),
-        folder_name,
-        bg_tag
+    let folder_name = format!(
+        "upscayl_{}_{}_{}",
+        payload.save_image_as, payload.model, suffix
     );
+    let bg_tag = if payload.bg_removal_mode != "off" {
+        "-bgremoved"
+    } else {
+        ""
+    };
+    let output_folder = format!("{}{}{}{}", output_dir, path_sep(), folder_name, bg_tag);
 
     let bg_enabled = bg_removal_enabled(&payload.bg_removal_mode, &payload.bg_removal_model);
     let bg_before = bg_enabled && payload.bg_removal_mode == "before";
@@ -864,7 +871,10 @@ pub fn run_batch(app: &AppHandle, payload: BatchUpscaylPayload) -> Result<(), St
         // Fresh batch: clear any leftover stop flag from a previous run.
         *app.state::<AppState>().stopped.lock().unwrap() = false;
 
-        logit(&app, &format!("🚀 Starting batch upscaling ({} images)", total));
+        logit(
+            &app,
+            &format!("🚀 Starting batch upscaling ({} images)", total),
+        );
 
         // Producer -> consumer channel with a small buffer so bg removal can
         // run ahead of the GPU-bound upscale step (pipeline parallelism).
@@ -895,7 +905,8 @@ pub fn run_batch(app: &AppHandle, payload: BatchUpscaylPayload) -> Result<(), St
                         let stem = file_stem(&original);
                         let temp = PathBuf::from(&output_dir)
                             .join(format!(".rescayl-bg-{}-{}.png", stem, idx));
-                        match bg_remove(&app, &original, temp.to_str().unwrap(), &bg_model_producer) {
+                        match bg_remove(&app, &original, temp.to_str().unwrap(), &bg_model_producer)
+                        {
                             Ok(()) => {
                                 process_path = temp.display().to_string();
                                 temp_file = Some(temp);
@@ -952,11 +963,7 @@ pub fn run_batch(app: &AppHandle, payload: BatchUpscaylPayload) -> Result<(), St
                     }
                     logit(
                         &app,
-                        &format!(
-                            "Processing image {}/{}: upscaling...",
-                            img.index + 1,
-                            total
-                        ),
+                        &format!("Processing image {}/{}: upscaling...", img.index + 1, total),
                     );
                     // Batch output naming matches upscayl-bin's folder mode:
                     // the original stem plus the target extension.
@@ -971,8 +978,11 @@ pub fn run_batch(app: &AppHandle, payload: BatchUpscaylPayload) -> Result<(), St
                         &bg_mode,
                     );
                     let out = dedup_out_path(&out);
-                    let effective_width =
-                        effective_custom_width_arg(&custom_width, &img.process_path, use_custom_width);
+                    let effective_width = effective_custom_width_arg(
+                        &custom_width,
+                        &img.process_path,
+                        use_custom_width,
+                    );
                     let args = build_args(
                         img.process_path.clone(),
                         out.clone(),
@@ -996,9 +1006,7 @@ pub fn run_batch(app: &AppHandle, payload: BatchUpscaylPayload) -> Result<(), St
                                 break;
                             }
                             if bg_after {
-                                if let Err(e) =
-                                    bg_remove_after(&app, &out, &bg_model, &save_as)
-                                {
+                                if let Err(e) = bg_remove_after(&app, &out, &bg_model, &save_as) {
                                     let mut s = stats.lock().unwrap();
                                     s.failed += 1;
                                     s.failures.push(format!("{}: {}", img.original_path, e));
@@ -1076,9 +1084,7 @@ pub fn run_batch(app: &AppHandle, payload: BatchUpscaylPayload) -> Result<(), St
             &app,
             &format!(
                 "💯 Batch complete: {} succeeded, {} failed out of {} images.",
-                succeeded,
-                failed,
-                total
+                succeeded, failed, total
             ),
         );
         for f in &failures {
@@ -1124,12 +1130,7 @@ pub fn run_double(app: &AppHandle, payload: DoubleUpscaylPayload) -> Result<(), 
         && bg_removal_enabled(&payload.bg_removal_mode, &payload.bg_removal_model);
     let mut bg_temp: Option<PathBuf> = None;
     if bg_before {
-        let temp = bg_remove_before(
-            app,
-            &input_path,
-            &output_dir,
-            &payload.bg_removal_model,
-        )?;
+        let temp = bg_remove_before(app, &input_path, &output_dir, &payload.bg_removal_model)?;
         input_path = temp.display().to_string();
         bg_temp = Some(temp);
     }
@@ -1189,12 +1190,10 @@ pub fn run_double(app: &AppHandle, payload: DoubleUpscaylPayload) -> Result<(), 
     std::thread::spawn(move || {
         let mut failed = false;
         if let Some(out) = stdout1 {
-            failed |=
-                stream_lines(&app, BufReader::new(out), EVENT_DOUBLE_UPSCAYL_PROGRESS);
+            failed |= stream_lines(&app, BufReader::new(out), EVENT_DOUBLE_UPSCAYL_PROGRESS);
         }
         if let Some(err) = stderr1 {
-            failed |=
-                stream_lines(&app, BufReader::new(err), EVENT_DOUBLE_UPSCAYL_PROGRESS);
+            failed |= stream_lines(&app, BufReader::new(err), EVENT_DOUBLE_UPSCAYL_PROGRESS);
         }
 
         let stopped = *app.state::<AppState>().stopped.lock().unwrap();
@@ -1223,12 +1222,10 @@ pub fn run_double(app: &AppHandle, payload: DoubleUpscaylPayload) -> Result<(), 
 
         let mut failed2 = false;
         if let Some(out) = stdout2 {
-            failed2 |=
-                stream_lines(&app, BufReader::new(out), EVENT_DOUBLE_UPSCAYL_PROGRESS);
+            failed2 |= stream_lines(&app, BufReader::new(out), EVENT_DOUBLE_UPSCAYL_PROGRESS);
         }
         if let Some(err) = stderr2 {
-            failed2 |=
-                stream_lines(&app, BufReader::new(err), EVENT_DOUBLE_UPSCAYL_PROGRESS);
+            failed2 |= stream_lines(&app, BufReader::new(err), EVENT_DOUBLE_UPSCAYL_PROGRESS);
         }
 
         let stopped2 = *app.state::<AppState>().stopped.lock().unwrap();
@@ -1312,7 +1309,7 @@ mod tests {
         assert!(result.is_ok());
         assert!(result.unwrap().is_none());
     }
-#[test]
+    #[test]
     fn auto_orient_rotates_image_with_orientation_tag() {
         let dir = std::env::temp_dir().join("rescayl-test-orient");
         std::fs::create_dir_all(&dir).unwrap();
@@ -1339,8 +1336,12 @@ mod tests {
         std::fs::create_dir_all(&dir).unwrap();
         let landscape = dir.join("landscape.png");
         let portrait = dir.join("portrait.png");
-        image::DynamicImage::new_rgb8(800, 600).save(&landscape).unwrap();
-        image::DynamicImage::new_rgb8(600, 800).save(&portrait).unwrap();
+        image::DynamicImage::new_rgb8(800, 600)
+            .save(&landscape)
+            .unwrap();
+        image::DynamicImage::new_rgb8(600, 800)
+            .save(&portrait)
+            .unwrap();
 
         // Landscape: width stays as requested.
         assert_eq!(

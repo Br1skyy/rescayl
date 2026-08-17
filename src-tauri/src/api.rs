@@ -115,10 +115,7 @@ fn now_ms() -> u64 {
 /// Directory where API-written inputs and outputs live.
 fn api_output_dir() -> PathBuf {
     let base = custom_models::default_custom_models_dir();
-    let dir = base
-        .parent()
-        .unwrap_or(&base)
-        .join("api-output");
+    let dir = base.parent().unwrap_or(&base).join("api-output");
     let _ = std::fs::create_dir_all(&dir);
     dir
 }
@@ -136,7 +133,10 @@ fn decode_base64_image(data: &str) -> Result<Vec<u8>, String> {
 
 /// Resolves the input into a concrete file path, writing base64 input to a
 /// temp file. Returns the path and an optional temp file to clean up.
-fn resolve_input(_app: &AppHandle, input: &ImageInput) -> Result<(String, Option<PathBuf>), String> {
+fn resolve_input(
+    _app: &AppHandle,
+    input: &ImageInput,
+) -> Result<(String, Option<PathBuf>), String> {
     if let Some(path) = &input.image_path {
         if path.trim().is_empty() {
             return Err("image_path is empty".into());
@@ -156,12 +156,10 @@ fn resolve_input(_app: &AppHandle, input: &ImageInput) -> Result<(String, Option
         // so a temp input sitting in the output dir would be overwritten or
         // deleted alongside the produced file.
         let dir = std::env::temp_dir().join("rescayl-api");
-        std::fs::create_dir_all(&dir)
-            .map_err(|e| format!("Failed to create temp dir: {}", e))?;
+        std::fs::create_dir_all(&dir).map_err(|e| format!("Failed to create temp dir: {}", e))?;
         let name = format!("input-{}-{}.png", now_ms(), std::process::id());
         let path = dir.join(name);
-        std::fs::write(&path, &bytes)
-            .map_err(|e| format!("Failed to write input image: {}", e))?;
+        std::fs::write(&path, &bytes).map_err(|e| format!("Failed to write input image: {}", e))?;
         return Ok((path.display().to_string(), Some(path)));
     }
     Err("Provide either 'image' (base64) or 'image_path'".into())
@@ -456,7 +454,9 @@ async fn upscale_handler(
         return Err(bad_request("Missing 'model'"));
     }
     if req.input.image.is_none() && req.input.image_path.is_none() {
-        return Err(bad_request("Provide either 'image' (base64) or 'image_path'"));
+        return Err(bad_request(
+            "Provide either 'image' (base64) or 'image_path'",
+        ));
     }
     let app = s.app.clone();
     let job_id = spawn_job(&s, "upscale", move || run_upscale_job(app, req));
@@ -473,7 +473,9 @@ async fn remove_bg_handler(
 ) -> Result<Json<JobCreated>, ApiError> {
     ensure_enabled(&s.app)?;
     if req.input.image.is_none() && req.input.image_path.is_none() {
-        return Err(bad_request("Provide either 'image' (base64) or 'image_path'"));
+        return Err(bad_request(
+            "Provide either 'image' (base64) or 'image_path'",
+        ));
     }
     let app = s.app.clone();
     let job_id = spawn_job(&s, "remove-bg", move || run_remove_bg_job(app, req));
@@ -493,7 +495,9 @@ async fn process_handler(
         return Err(bad_request("Missing 'model'"));
     }
     if req.input.image.is_none() && req.input.image_path.is_none() {
-        return Err(bad_request("Provide either 'image' (base64) or 'image_path'"));
+        return Err(bad_request(
+            "Provide either 'image' (base64) or 'image_path'",
+        ));
     }
     let app = s.app.clone();
     let job_id = spawn_job(&s, "process", move || run_process_job(app, req));
@@ -557,10 +561,7 @@ pub fn start_server(app: AppHandle) {
             let listener = match tokio::net::TcpListener::bind(("127.0.0.1", port)).await {
                 Ok(listener) => listener,
                 Err(e) => {
-                    eprintln!(
-                        "[rescayl-api] failed to bind 127.0.0.1:{}: {}",
-                        port, e
-                    );
+                    eprintln!("[rescayl-api] failed to bind 127.0.0.1:{}: {}", port, e);
                     return;
                 }
             };

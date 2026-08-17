@@ -99,20 +99,20 @@ pub fn bundled_manifest_path(app: &tauri::AppHandle) -> Option<PathBuf> {
         }
     }
 
-    for candidate in candidates {
-        if candidate.exists() {
-            return Some(candidate);
-        }
-    }
-    None
+    candidates.into_iter().find(|c| c.exists())
 }
 
 /// Load the marketplace manifest. The bundled `resources/marketplace.json`
 /// is authoritative; it ships with the app and is bundled by tauri.conf.json.
 pub async fn fetch_manifest(app: &AppHandle) -> Result<MarketplaceManifest, String> {
     if let Some(path) = bundled_manifest_path(app) {
-        let data =
-            std::fs::read_to_string(&path).map_err(|e| format!("Failed to read marketplace manifest at {}: {}", path.display(), e))?;
+        let data = std::fs::read_to_string(&path).map_err(|e| {
+            format!(
+                "Failed to read marketplace manifest at {}: {}",
+                path.display(),
+                e
+            )
+        })?;
         let manifest = serde_json::from_str::<MarketplaceManifest>(&data)
             .map_err(|e| format!("Invalid marketplace manifest: {}", e))?;
         let _ = std::fs::write(manifest_cache_path(), &data);
@@ -315,8 +315,7 @@ pub fn save_review(model_id: &str, rating: u8, review: &str) -> Result<(), Strin
     let path = reviews_path();
     std::fs::write(
         &path,
-        serde_json::to_string_pretty(&UserReviews { reviews })
-            .unwrap_or_default(),
+        serde_json::to_string_pretty(&UserReviews { reviews }).unwrap_or_default(),
     )
     .map_err(|e| format!("Failed to save review: {}", e))
 }
