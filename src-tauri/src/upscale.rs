@@ -442,20 +442,40 @@ fn stream_lines(app: &AppHandle, reader: impl BufRead, progress_event: &str) -> 
 /// through `progress_event` as it runs. Returns an error if the process
 /// reported a failure. The stop flag and the tracked child remain in state so
 /// STOP can interrupt a running image.
+/// Drains a child's stdout and stderr concurrently and reports whether the
+/// process printed an error. Sequential reads deadlock once the child fills
+/// the 64KB pipe buffer on the side not being read (upscayl-bin prints GPU
+/// info to stderr, so both pipes get filled).
+fn drain_pipes(
+    app: &AppHandle,
+    stdout: Option<ChildStdout>,
+    stderr: Option<ChildStderr>,
+    progress_event: &str,
+) -> bool {
+    let app_for_stderr = app.clone();
+    let progress_for_stderr = progress_event.to_string();
+    let stderr_reader = stderr.map(|err| {
+        std::thread::spawn(move || {
+            stream_lines(&app_for_stderr, BufReader::new(err), &progress_for_stderr)
+        })
+    });
+    let mut failed = false;
+    if let Some(out) = stdout {
+        failed |= stream_lines(app, BufReader::new(out), progress_event);
+    }
+    if let Some(handle) = stderr_reader {
+        failed |= handle.join().unwrap_or(false);
+    }
+    failed
+}
+
 fn run_process_sync(
     app: &AppHandle,
     args: Vec<String>,
     progress_event: &str,
 ) -> Result<(), String> {
     let (stdout, stderr) = spawn_and_track(app, args)?;
-    let mut failed = false;
-    if let Some(out) = stdout {
-        failed |= stream_lines(app, BufReader::new(out), progress_event);
-    }
-    if let Some(err) = stderr {
-        failed |= stream_lines(app, BufReader::new(err), progress_event);
-    }
-    if failed {
+    if drain_pipes(app, stdout, stderr, progress_event) {
         return Err("upscayl-bin reported an error".into());
     }
     Ok(())
@@ -1231,13 +1251,7 @@ pub fn run_double(app: &AppHandle, payload: DoubleUpscaylPayload) -> Result<(), 
     let save_as = payload.save_image_as.clone();
 
     std::thread::spawn(move || {
-        let mut failed = false;
-        if let Some(out) = stdout1 {
-            failed |= stream_lines(&app, BufReader::new(out), EVENT_DOUBLE_UPSCAYL_PROGRESS);
-        }
-        if let Some(err) = stderr1 {
-            failed |= stream_lines(&app, BufReader::new(err), EVENT_DOUBLE_UPSCAYL_PROGRESS);
-        }
+        let failed = drain_pipes(&app, stdout1, stderr1, EVENT_DOUBLE_UPSCAYL_PROGRESS);
 
         let stopped = *app.state::<AppState>().stopped.lock().unwrap();
         if failed || stopped {
@@ -1263,13 +1277,7 @@ pub fn run_double(app: &AppHandle, payload: DoubleUpscaylPayload) -> Result<(), 
             }
         };
 
-        let mut failed2 = false;
-        if let Some(out) = stdout2 {
-            failed2 |= stream_lines(&app, BufReader::new(out), EVENT_DOUBLE_UPSCAYL_PROGRESS);
-        }
-        if let Some(err) = stderr2 {
-            failed2 |= stream_lines(&app, BufReader::new(err), EVENT_DOUBLE_UPSCAYL_PROGRESS);
-        }
+        let failed2 = drain_pipes(&app, stdout2, stderr2, EVENT_DOUBLE_UPSCAYL_PROGRESS);
 
         let stopped2 = *app.state::<AppState>().stopped.lock().unwrap();
         if let Some(temp) = oriented {
