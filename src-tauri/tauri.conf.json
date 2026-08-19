@@ -48,9 +48,6 @@
     "resources": {
       "../resources/models/**/*": "resources/models/",
       "../resources/scripts/**/*": "resources/scripts/",
-      "../resources/linux/bin/**/*": "resources/bin/",
-      "../resources/mac/bin/**/*": "resources/bin/",
-      "../resources/win/bin/**/*": "resources/bin/",
       "../resources/marketplace.json": "resources/marketplace.json"
     }
   }

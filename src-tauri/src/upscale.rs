@@ -307,6 +307,49 @@ fn models_dir_for(app: &AppHandle, model: &str) -> PathBuf {
 
 // ---- process handling ----
 
+/// The AppImage bundler drops the exec bit from bundled resources (the
+/// squashfs mount is read-only, so it cannot be fixed in place). When the
+/// resolved `upscayl-bin` is not executable, copy it to the writable app
+/// cache dir, mark it executable and return that path instead.
+#[cfg(unix)]
+fn ensure_executable(app: &AppHandle, exec: &Path) -> PathBuf {
+    use std::os::unix::fs::PermissionsExt;
+
+    let Ok(metadata) = exec.metadata() else {
+        return exec.to_path_buf();
+    };
+    if metadata.permissions().mode() & 0o111 != 0 {
+        return exec.to_path_buf();
+    }
+
+    let cache_dir = app
+        .path()
+        .app_cache_dir()
+        .unwrap_or_else(|_| std::env::temp_dir().join("rescayl"));
+    let _ = std::fs::create_dir_all(&cache_dir);
+    let cached = cache_dir.join(exec_name());
+    if cached
+        .metadata()
+        .map(|m| m.permissions().mode() & 0o111 != 0)
+        .unwrap_or(false)
+    {
+        return cached;
+    }
+
+    match std::fs::copy(exec, &cached) {
+        Ok(_) => {
+            let _ = std::fs::set_permissions(&cached, std::fs::Permissions::from_mode(0o755));
+            cached
+        }
+        Err(_) => exec.to_path_buf(),
+    }
+}
+
+#[cfg(not(unix))]
+fn ensure_executable(_app: &AppHandle, exec: &Path) -> PathBuf {
+    exec.to_path_buf()
+}
+
 /// Spawns `upscayl-bin` with the given args, resets the stop flag and
 /// registers the child in shared state so STOP can kill it.
 fn spawn_and_track(
@@ -315,7 +358,7 @@ fn spawn_and_track(
 ) -> Result<(Option<ChildStdout>, Option<ChildStderr>), String> {
     let state = app.state::<AppState>();
     let (exec_dir, _) = resolve_paths(app);
-    let exec = exec_dir.join(exec_name());
+    let exec = ensure_executable(app, &exec_dir.join(exec_name()));
 
     let filtered: Vec<&String> = args.iter().filter(|a| !a.is_empty()).collect();
 
