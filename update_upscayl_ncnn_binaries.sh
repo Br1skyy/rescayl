@@ -41,3 +41,29 @@ rm -rf extracted_files
 rm -f *.zip
 
 echo "Script executed successfully."
+
+# Default model weights are not stored in git; they are fetched from the
+# upstream Upscayl repos at build time so the bundle ships with working models.
+download_default_models() {
+    mkdir -p resources/models
+
+    # Bundled upscayl models (param + bin pairs) from the Upscayl repo.
+    upscayl_models="digital-art-4x high-fidelity-4x remacri-4x ultramix-balanced-4x ultrasharp-4x upscayl-lite-4x upscayl-standard-4x"
+    for m in $upscayl_models; do
+        echo "Downloading model $m..."
+        curl -sL -o resources/models/$m.param https://raw.githubusercontent.com/upscayl/upscayl/main/resources/models/$m.param
+        curl -sL -o resources/models/$m.bin https://raw.githubusercontent.com/upscayl/upscayl/main/resources/models/$m.bin
+    done
+
+    # Anime video models from the custom-models repo.
+    anime_models="realesr-animevideov3-x2 realesr-animevideov3-x3 realesr-animevideov3-x4"
+    for m in $anime_models; do
+        echo "Downloading model $m..."
+        curl -sL -o resources/models/$m.param https://raw.githubusercontent.com/upscayl/custom-models/main/models/$m.param
+        curl -sL -o resources/models/$m.bin https://raw.githubusercontent.com/upscayl/custom-models/main/models/$m.bin
+    done
+
+    echo "Models downloaded successfully."
+}
+
+download_default_models

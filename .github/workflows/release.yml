@@ -100,6 +100,21 @@ jobs:
           Get-ChildItem extracted -Recurse -Filter "vcomp140*.dll" | ForEach-Object { Copy-Item $_.FullName resources/win/bin/ }
           Remove-Item -Recurse -Force extracted, upscayl-bin-win.zip
 
+      - name: Fetch default model weights
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path resources/models | Out-Null
+          $models = @('digital-art-4x','high-fidelity-4x','remacri-4x','ultramix-balanced-4x','ultrasharp-4x','upscayl-lite-4x','upscayl-standard-4x')
+          foreach ($m in $models) {
+            Invoke-WebRequest -Uri "https://raw.githubusercontent.com/upscayl/upscayl/main/resources/models/$m.param" -OutFile "resources/models/$m.param"
+            Invoke-WebRequest -Uri "https://raw.githubusercontent.com/upscayl/upscayl/main/resources/models/$m.bin" -OutFile "resources/models/$m.bin"
+          }
+          $anime = @('realesr-animevideov3-x2','realesr-animevideov3-x3','realesr-animevideov3-x4')
+          foreach ($m in $anime) {
+            Invoke-WebRequest -Uri "https://raw.githubusercontent.com/upscayl/custom-models/main/models/$m.param" -OutFile "resources/models/$m.param"
+            Invoke-WebRequest -Uri "https://raw.githubusercontent.com/upscayl/custom-models/main/models/$m.bin" -OutFile "resources/models/$m.bin"
+          }
+
       - name: Build installer
         run: npm run tauri build
 
