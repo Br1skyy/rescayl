@@ -35,7 +35,7 @@
   "bundle": {
     "active": true,
     "targets": "all",
-    "category": "Graphics",
+    "category": "Graphics and Design",
     "shortDescription": "AI Image Upscaler",
     "longDescription": "Rescayl - Free and Open Source AI Image Upscaler",
     "icon": [
